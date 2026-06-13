@@ -1521,6 +1521,706 @@ document.body
 }
 
 </script>
+```html
+<!-- ==========================
+BOOKING
+========================== -->
+
+<section id="booking">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Book Decoration
+
+</h2>
+
+<p class="subtitle">
+
+Reserve your luxury experience
+
+</p>
+
+<form
+id="bookingForm"
+class="booking card">
+
+<input
+required
+placeholder="Customer Name">
+
+<input
+required
+type="tel"
+placeholder="Phone">
+
+<input
+type="email"
+placeholder="Email">
+
+<select required>
+
+<option>
+Event Type
+</option>
+
+<option>
+Wedding
+</option>
+
+<option>
+Engagement
+</option>
+
+<option>
+Corporate
+</option>
+
+<option>
+Celebration
+</option>
+
+</select>
+
+<input
+type="date">
+
+<input
+placeholder="Location">
+
+<input
+placeholder="Budget">
+
+<select>
+
+<option>
+Service
+</option>
+
+<option>
+Event Decoration
+</option>
+
+<option>
+Mandap Decoration
+</option>
+
+<option>
+Stage Decoration
+</option>
+
+<option>
+Car Decoration
+</option>
+
+<option>
+Corporate Decoration
+</option>
+
+</select>
+
+<textarea
+placeholder="Notes">
+
+</textarea>
+
+<label class="upload">
+
+Upload Inspiration
+
+<input
+type="file"
+hidden>
+
+</label>
+
+<button
+class="btn">
+
+Book Now
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+
+<!-- ==========================
+CONTACT
+========================== -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Contact Us
+
+</h2>
+
+<p class="subtitle">
+
+Let’s create memorable events
+
+</p>
+
+<div class="contact-grid">
+
+<div class="card">
+
+<h3>
+
+SAINI FLOWER DECORATORS
+
+</h3>
+
+<br>
+
+<p>
+
+📍 New Delhi
+
+</p>
+
+<p>
+
+📞 +91 XXXXXXXXXX
+
+</p>
+
+<p>
+
+✉ hello@sainiflowers.com
+
+</p>
+
+<br>
+
+<div class="socials">
+
+<a href="#">
+
+Instagram
+
+</a>
+
+<a href="#">
+
+Facebook
+
+</a>
+
+<a href="#">
+
+WhatsApp
+
+</a>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="map">
+
+Google Maps
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FLOATING -->
+
+<a
+class="wa"
+href="#">
+
+💬
+
+</a>
+
+<a
+class="call"
+href="#">
+
+📞
+
+</a>
+
+
+
+<footer>
+
+<div class="container">
+
+<h3>
+
+SAINI FLOWER DECORATORS
+
+</h3>
+
+<p>
+
+Decorating Memories With Flowers
+
+</p>
+
+<p>
+
+© Since 1987
+
+</p>
+
+</div>
+
+</footer>
+
+
+
+<style>
+
+/*==========================*/
+
+.booking{
+
+display:grid;
+
+gap:18px;
+
+max-width:850px;
+
+margin:auto;
+
+}
+
+.booking input,
+.booking select,
+.booking textarea{
+
+padding:18px;
+
+border:none;
+
+border-radius:18px;
+
+background:
+
+rgba(
+255,
+255,
+255,
+.65
+);
+
+}
+
+textarea{
+
+height:160px;
+
+resize:none;
+
+}
+
+.upload{
+
+padding:22px;
+
+border:2px dashed
+var(--gold);
+
+text-align:center;
+
+cursor:pointer;
+
+border-radius:20px;
+
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:
+1fr
+1fr;
+
+gap:30px;
+
+}
+
+.socials{
+
+display:flex;
+
+gap:16px;
+
+flex-wrap:wrap;
+
+}
+
+.socials a{
+
+color:var(--gold);
+
+}
+
+.map{
+
+height:350px;
+
+display:grid;
+
+place-items:center;
+
+font-size:34px;
+
+background:
+
+linear-gradient(
+135deg,
+var(--gold),
+var(--emerald)
+);
+
+color:white;
+
+border-radius:26px;
+
+}
+
+/*==========================*/
+
+.wa,
+.call{
+
+position:fixed;
+
+right:24px;
+
+width:64px;
+
+height:64px;
+
+border-radius:50%;
+
+display:grid;
+
+place-items:center;
+
+text-decoration:none;
+
+font-size:26px;
+
+color:white;
+
+z-index:999;
+
+}
+
+.wa{
+
+bottom:100px;
+
+background:#25D366;
+
+}
+
+.call{
+
+bottom:180px;
+
+background:var(--gold);
+
+}
+
+/*==========================*/
+
+footer{
+
+padding:80px 0;
+
+text-align:center;
+
+}
+
+footer h3{
+
+font-size:42px;
+
+font-family:
+"Cormorant Garamond";
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+/*==========================*/
+
+.success{
+
+position:fixed;
+
+top:30px;
+
+left:50%;
+
+transform:
+translateX(-50%);
+
+background:
+
+var(--gold);
+
+color:white;
+
+padding:20px;
+
+border-radius:999px;
+
+z-index:9999;
+
+animation:
+fade 4s;
+
+}
+
+@keyframes fade{
+
+0%{
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+opacity:0;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+/*==========================
+SITE CONFIG
+==========================*/
+
+const SITE_CONFIG={
+
+businessName:
+"SAINI FLOWER DECORATORS",
+
+tagline:
+"Decorating Memories With Flowers",
+
+phone:
+"+91XXXXXXXXXX",
+
+email:
+"hello@sainiflowers.com",
+
+colors:{
+
+gold:"#C9A34E",
+
+emerald:"#0F5B4D"
+
+}
+
+}
+
+/*==========================
+BOOKING
+==========================*/
+
+document
+
+.getElementById(
+"bookingForm"
+)
+
+.addEventListener(
+
+"submit",
+
+e=>{
+
+e.preventDefault()
+
+const box=
+document
+.createElement(
+"div"
+)
+
+box.className=
+"success"
+
+box.innerHTML=`
+
+Thank you for choosing
+Saini Flower Decorators.
+
+`
+
+document
+.body
+.appendChild(
+box
+)
+
+setTimeout(
+
+()=>box.remove(),
+
+4000
+
+)
+
+/*
+
+API READY
+
+fetch("/api/book")
+
+*/
+
+e.target.reset()
+
+}
+
+)
+
+/*==========================
+PARALLAX
+==========================*/
+
+window
+.addEventListener(
+
+"scroll",
+
+()=>{
+
+const y=
+
+window
+.scrollY
+
+document
+.querySelector(
+
+".hero"
+
+)
+
+.style.backgroundPosition=
+
+`center ${y*.2}px`
+
+}
+
+)
+
+/*==========================
+REVEAL
+==========================*/
+
+const reveal=
+
+new IntersectionObserver(
+
+entries=>{
+
+entries.forEach(
+
+e=>{
+
+if(
+e.isIntersecting
+)
+
+e.target.style.opacity=1
+
+}
+
+)
+
+}
+
+)
+
+document
+
+.querySelectorAll(
+
+"section"
+
+)
+
+.forEach(
+
+s=>{
+
+s.style.opacity=.2
+
+s.style.transition=
+
+"1s"
+
+reveal.observe(
+s
+)
+
+}
+
+)
+
+</script>
+
+</body>
+
+</html>
+```
 
 </body>
 </html>
