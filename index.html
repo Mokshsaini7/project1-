@@ -1,1125 +1,916 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<meta name="description" content="Saini Flower Decorators - Premium flower decoration events. Book professional floral decorations online."/>
-<title>Saini Flower Decorators | Premium Floral Decoration</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAINI FLOWER DECORATORS | Decorating Memories With Flowers</title>
+
+<meta name="description"
+content="Premium Royal Flower Decoration Services Since 1987">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
+
+/*==========================
+CONFIG
+==========================*/
+
 :root{
-  --cream:#FDF8F2;
-  --pink-light:#F9E8EC;
-  --pink:#E8A0B4;
-  --pink-deep:#C4637D;
-  --gold:#C9A84C;
-  --gold-light:#E8D5A0;
-  --gold-pale:#FAF5E8;
-  --green-deep:#2D4A3E;
-  --green:#3D6B5A;
-  --white:#FFFFFF;
-  --text-dark:#1A1A1A;
-  --text-mid:#4A4A4A;
-  --text-light:#7A7A7A;
-  --border:#E8D5C0;
-  --shadow:0 4px 30px rgba(0,0,0,0.08);
-  --shadow-hover:0 8px 40px rgba(0,0,0,0.14);
-}
-html{scroll-behavior:smooth}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden}
-.serif{font-family:'Cormorant Garamond',serif}
-.script{font-family:'Great Vibes',cursive}
 
-/* ──────────────── NAV ──────────────── */
-nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:0 5%;background:rgba(253,248,242,0.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);transition:all .3s}
-.nav-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),var(--gold-light));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px}
-.logo-text{line-height:1.1}
-.logo-name{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--green-deep)}
-.logo-tag{font-family:'Great Vibes',cursive;font-size:12px;color:var(--gold);letter-spacing:.5px}
-.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
-.nav-links a{text-decoration:none;color:var(--text-mid);font-size:14px;font-weight:400;letter-spacing:.5px;text-transform:uppercase;transition:color .2s;position:relative}
-.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--gold);transition:width .3s}
-.nav-links a:hover{color:var(--gold)}
-.nav-links a:hover::after{width:100%}
-.nav-cta{background:var(--green-deep);color:var(--white)!important;padding:10px 24px!important;border-radius:2px;transition:background .2s!important}
-.nav-cta:hover{background:var(--green)!important}
-.nav-cta::after{display:none!important}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.hamburger span{width:24px;height:1.5px;background:var(--text-dark);transition:all .3s}
+--gold:#C9A34E;
+--ivory:#FFF8EF;
+--pink:#F7D7DF;
+--emerald:#0F5B4D;
+--white:#FFFFFF;
 
-/* ──────────────── HERO ──────────────── */
-#home{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:72px}
-.hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#FDF8F2 0%,#F9F0E8 40%,#F5E8E0 100%)}
-.hero-floral-left{position:absolute;left:-60px;top:50%;transform:translateY(-50%);width:420px;opacity:.18;pointer-events:none}
-.hero-floral-right{position:absolute;right:-40px;bottom:-20px;width:380px;opacity:.14;pointer-events:none}
-.hero-content{position:relative;z-index:2;max-width:1400px;margin:0 auto;padding:0 5%;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%}
-.hero-text{}
-.hero-badge{display:inline-block;background:var(--gold-pale);border:1px solid var(--gold-light);color:var(--gold);font-size:11px;letter-spacing:3px;text-transform:uppercase;padding:6px 18px;border-radius:20px;margin-bottom:24px}
-.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,68px);font-weight:300;line-height:1.1;color:var(--green-deep);margin-bottom:8px}
-.hero-headline em{font-style:italic;color:var(--pink-deep)}
-.hero-script{font-family:'Great Vibes',cursive;font-size:clamp(28px,3vw,42px);color:var(--gold);display:block;margin-bottom:24px}
-.hero-sub{font-size:16px;color:var(--text-mid);line-height:1.7;max-width:480px;font-weight:300;margin-bottom:36px}
-.hero-actions{display:flex;gap:16px;flex-wrap:wrap}
-.btn-primary{background:var(--green-deep);color:var(--white);padding:14px 36px;border:none;border-radius:2px;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
-.btn-primary:hover{background:var(--green);transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,74,62,.25)}
-.btn-outline{background:transparent;color:var(--green-deep);padding:13px 36px;border:1px solid var(--green-deep);border-radius:2px;font-family:'Jost',sans-serif;font-size:14px;font-weight:500;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block}
-.btn-outline:hover{background:var(--green-deep);color:var(--white);transform:translateY(-2px)}
-.hero-stats{display:flex;gap:36px;margin-top:48px;padding-top:36px;border-top:1px solid var(--border)}
-.stat{}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:var(--green-deep)}
-.stat-label{font-size:11px;color:var(--text-light);letter-spacing:1px;text-transform:uppercase}
-.hero-visual{position:relative}
-.hero-img-main{width:100%;aspect-ratio:.8;background:linear-gradient(160deg,#F2E8F0,#E8D4DC,#D4B8C8);border-radius:4px;overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.12)}
-.hero-img-badge{position:absolute;bottom:24px;left:-24px;background:var(--white);border-radius:4px;padding:14px 20px;box-shadow:0 8px 30px rgba(0,0,0,.12);display:flex;align-items:center;gap:12px;min-width:180px}
-.badge-icon{width:40px;height:40px;background:var(--gold-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.badge-text{font-size:12px;font-weight:500;color:var(--text-dark)}
-.badge-sub{font-size:10px;color:var(--text-light)}
-/* SVG flower art inside hero */
-.floral-svg{width:100%;height:100%;position:absolute;inset:0}
+--bg:#fff8ef;
+--card:rgba(255,255,255,.55);
 
-/* ──────────────── SECTION COMMONS ──────────────── */
-section{padding:100px 5%}
-.section-inner{max-width:1400px;margin:0 auto}
-.section-eyebrow{font-size:11px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:12px}
-.section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,52px);font-weight:300;color:var(--green-deep);line-height:1.15}
-.section-title em{font-style:italic;color:var(--pink-deep)}
-.section-sub{font-size:15px;color:var(--text-mid);line-height:1.7;font-weight:300;max-width:580px;margin-top:16px}
-.section-header{margin-bottom:60px}
-.section-header.center{text-align:center}
-.section-header.center .section-sub{margin:16px auto 0}
-.divider{width:60px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:20px auto}
+--text:#17211f;
 
-/* ──────────────── SERVICES ──────────────── */
-#services{background:var(--white)}
-.services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:28px}
-.service-card{background:var(--cream);border-radius:4px;overflow:hidden;transition:all .4s;cursor:pointer;position:relative;group:true}
-.service-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-hover)}
-.service-card-img{height:220px;position:relative;overflow:hidden}
-.service-card-img .img-bg{width:100%;height:100%;transition:transform .6s;display:flex;align-items:center;justify-content:center}
-.service-card:hover .img-bg{transform:scale(1.05)}
-.service-card-body{padding:24px}
-.service-card-title{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:500;color:var(--green-deep);margin-bottom:8px}
-.service-card-desc{font-size:13px;color:var(--text-mid);line-height:1.65;font-weight:300}
-.service-card-link{display:inline-flex;align-items:center;gap:6px;font-size:12px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-top:14px;text-decoration:none;font-weight:500}
-.service-card-link::after{content:'→';transition:transform .2s}
-.service-card:hover .service-card-link::after{transform:translateX(4px)}
-.service-badge{position:absolute;top:14px;right:14px;background:rgba(255,255,255,.9);backdrop-filter:blur(4px);border-radius:20px;padding:4px 12px;font-size:10px;color:var(--gold);letter-spacing:1px;text-transform:uppercase;font-weight:600}
+--radius:28px;
 
-/* ──────────────── GALLERY ──────────────── */
-#gallery{background:var(--cream)}
-.gallery-filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:40px;justify-content:center}
-.filter-btn{padding:8px 22px;border-radius:20px;border:1px solid var(--border);background:transparent;font-family:'Jost',sans-serif;font-size:13px;color:var(--text-mid);cursor:pointer;transition:all .25s;font-weight:400}
-.filter-btn.active,.filter-btn:hover{background:var(--green-deep);color:var(--white);border-color:var(--green-deep)}
-.gallery-grid{columns:3;column-gap:16px}
-.gallery-item{break-inside:avoid;margin-bottom:16px;position:relative;overflow:hidden;border-radius:4px;cursor:pointer}
-.gallery-item img,.gallery-item .gallery-placeholder{width:100%;display:block;transition:transform .5s}
-.gallery-item:hover .gallery-placeholder{transform:scale(1.04)}
-.gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(45,74,62,.7) 0%,transparent 60%);opacity:0;transition:opacity .3s;display:flex;align-items:flex-end;padding:20px}
-.gallery-item:hover .gallery-overlay{opacity:1}
-.gallery-caption{color:var(--white);font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:400}
-
-/* ──────────────── BOOKING ──────────────── */
-#booking{background:linear-gradient(135deg,var(--green-deep) 0%,#1F3530 100%);position:relative;overflow:hidden}
-.booking-bg-floral{position:absolute;right:-100px;top:-100px;opacity:.06;width:500px;pointer-events:none}
-.booking-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:start}
-.booking-info{}
-.booking-info .section-eyebrow{color:var(--gold-light)}
-.booking-info .section-title{color:var(--white)}
-.booking-info .section-sub{color:rgba(255,255,255,.7)}
-.booking-features{margin-top:36px;display:flex;flex-direction:column;gap:16px}
-.booking-feat{display:flex;align-items:flex-start;gap:14px;color:rgba(255,255,255,.85);font-size:14px;font-weight:300}
-.feat-icon{width:32px;height:32px;background:rgba(255,255,255,.08);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:16px;margin-top:-2px}
-.booking-form-wrap{background:rgba(255,255,255,.97);border-radius:4px;padding:44px 40px;box-shadow:0 24px 60px rgba(0,0,0,.2)}
-.form-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;color:var(--green-deep);margin-bottom:6px}
-.form-sub{font-size:13px;color:var(--text-light);margin-bottom:28px}
-.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.form-group{display:flex;flex-direction:column;gap:6px}
-.form-group.full{grid-column:1/-1}
-.form-label{font-size:12px;font-weight:500;color:var(--text-mid);letter-spacing:.5px;text-transform:uppercase}
-.form-input,.form-select,.form-textarea{width:100%;padding:11px 14px;border:1px solid var(--border);border-radius:2px;font-family:'Jost',sans-serif;font-size:14px;color:var(--text-dark);background:var(--cream);transition:border-color .2s;outline:none}
-.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--green);background:var(--white)}
-.form-textarea{resize:vertical;min-height:90px;line-height:1.5}
-.form-select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%234A4A4A' stroke-width='1.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
-.file-upload{border:1.5px dashed var(--border);border-radius:2px;padding:20px;text-align:center;cursor:pointer;transition:border-color .2s;background:var(--cream)}
-.file-upload:hover{border-color:var(--green);background:var(--white)}
-.file-upload-icon{font-size:24px;margin-bottom:6px;display:block}
-.file-upload-text{font-size:12px;color:var(--text-light)}
-.file-upload input{display:none}
-.btn-submit{width:100%;background:var(--green-deep);color:var(--white);padding:15px;border:none;border-radius:2px;font-family:'Jost',sans-serif;font-size:14px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;margin-top:8px}
-.btn-submit:hover{background:var(--green);transform:translateY(-2px);box-shadow:0 8px 24px rgba(45,74,62,.35)}
-.btn-submit:disabled{opacity:.6;cursor:not-allowed;transform:none;box-shadow:none}
-
-/* ──────────────── PRICING ──────────────── */
-#pricing{background:var(--white)}
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.price-card{border:1px solid var(--border);border-radius:4px;padding:40px 32px;position:relative;transition:all .3s;background:var(--cream)}
-.price-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-hover)}
-.price-card.featured{background:var(--green-deep);border-color:var(--green-deep);color:var(--white)}
-.price-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--white);font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 18px;border-radius:20px;font-weight:600;white-space:nowrap}
-.price-tier{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;font-weight:500}
-.price-card.featured .price-tier{color:var(--gold-light)}
-.price-name{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;margin-bottom:6px}
-.price-card.featured .price-name{color:var(--white)}
-.price-amount{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:300;color:var(--green-deep);line-height:1}
-.price-card.featured .price-amount{color:var(--gold-light)}
-.price-period{font-size:14px;color:var(--text-light);font-weight:300}
-.price-card.featured .price-period{color:rgba(255,255,255,.6)}
-.price-divider{width:40px;height:1px;background:var(--border);margin:24px 0}
-.price-card.featured .price-divider{background:rgba(255,255,255,.2)}
-.price-features{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px}
-.price-features li{font-size:14px;color:var(--text-mid);display:flex;align-items:flex-start;gap:10px;line-height:1.4}
-.price-card.featured .price-features li{color:rgba(255,255,255,.85)}
-.price-features li::before{content:'✦';color:var(--gold);font-size:10px;margin-top:3px;flex-shrink:0}
-.btn-price{width:100%;padding:13px;border-radius:2px;font-family:'Jost',sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase;cursor:pointer;transition:all .3s;border:none}
-.btn-price-outline{background:transparent;border:1px solid var(--green-deep);color:var(--green-deep)}
-.btn-price-outline:hover{background:var(--green-deep);color:var(--white)}
-.btn-price-solid{background:var(--gold);color:var(--white)}
-.btn-price-solid:hover{background:#B8963D}
-.btn-price-featured{background:var(--white);color:var(--green-deep)}
-.btn-price-featured:hover{background:var(--gold-pale)}
-
-/* ──────────────── TESTIMONIALS ──────────────── */
-#testimonials{background:var(--cream)}
-.testimonials-carousel{position:relative;overflow:hidden}
-.testimonials-track{display:flex;gap:28px;transition:transform .5s cubic-bezier(.4,0,.2,1)}
-.testimonial-card{flex:0 0 calc(33.333% - 19px);background:var(--white);border-radius:4px;padding:36px;box-shadow:var(--shadow);position:relative;min-width:0}
-.testimonial-card::before{content:'"';font-family:'Cormorant Garamond',serif;font-size:80px;color:var(--gold-light);position:absolute;top:16px;left:24px;line-height:1;opacity:.6}
-.testimonial-rating{display:flex;gap:3px;margin-bottom:16px}
-.star{color:var(--gold);font-size:14px}
-.testimonial-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;line-height:1.6;color:var(--text-dark);font-style:italic;position:relative;z-index:1}
-.testimonial-author{display:flex;align-items:center;gap:12px;margin-top:24px;padding-top:20px;border-top:1px solid var(--border)}
-.author-avatar{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-.author-name{font-weight:500;font-size:14px;color:var(--text-dark)}
-.author-event{font-size:12px;color:var(--text-light)}
-.carousel-controls{display:flex;justify-content:center;gap:12px;margin-top:40px}
-.carousel-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--border);background:var(--white);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--text-mid);transition:all .2s}
-.carousel-btn:hover{background:var(--green-deep);border-color:var(--green-deep);color:var(--white)}
-.carousel-dots{display:flex;gap:8px;align-items:center;margin-top:20px;justify-content:center}
-.dot{width:6px;height:6px;border-radius:50%;background:var(--border);cursor:pointer;transition:all .3s}
-.dot.active{background:var(--green-deep);width:20px;border-radius:3px}
-
-/* ──────────────── CONTACT ──────────────── */
-#contact{background:var(--white)}
-.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
-.contact-info{}
-.contact-methods{margin-top:32px;display:flex;flex-direction:column;gap:16px}
-.contact-method{display:flex;align-items:center;gap:16px;padding:20px;background:var(--cream);border-radius:4px;text-decoration:none;transition:all .25s}
-.contact-method:hover{background:var(--gold-pale);transform:translateX(4px)}
-.method-icon{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
-.method-icon.whatsapp{background:#DCF8C6}
-.method-icon.phone{background:var(--pink-light)}
-.method-icon.email-m{background:#E8F0FE}
-.method-label{font-size:11px;color:var(--text-light);text-transform:uppercase;letter-spacing:1px}
-.method-value{font-weight:500;color:var(--text-dark);font-size:15px}
-.map-placeholder{margin-top:28px;background:var(--cream);border-radius:4px;height:200px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:var(--text-light)}
-.map-placeholder .map-icon{font-size:32px}
-.map-placeholder span{font-size:12px;letter-spacing:1px;text-transform:uppercase}
-.contact-form-card{background:var(--cream);border-radius:4px;padding:44px 40px;border:1px solid var(--border)}
-.contact-form-card .form-grid{grid-template-columns:1fr 1fr}
-.floating-actions{position:fixed;bottom:28px;right:24px;display:flex;flex-direction:column;gap:12px;z-index:999}
-.float-btn{width:52px;height:52px;border-radius:50%;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:22px;transition:all .3s;box-shadow:0 4px 16px rgba(0,0,0,.18);text-decoration:none}
-.float-whatsapp{background:#25D366}
-.float-call{background:var(--pink-deep)}
-.float-btn:hover{transform:scale(1.1);box-shadow:0 8px 24px rgba(0,0,0,.25)}
-
-/* ──────────────── FOOTER ──────────────── */
-footer{background:var(--green-deep);color:rgba(255,255,255,.8);padding:60px 5% 28px}
-.footer-inner{max-width:1400px;margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:48px}
-.footer-brand .logo-name{color:var(--white);font-size:22px}
-.footer-brand .logo-tag{font-size:14px}
-.footer-desc{font-size:13px;line-height:1.7;color:rgba(255,255,255,.6);margin-top:14px;font-weight:300}
-.footer-social{display:flex;gap:10px;margin-top:20px}
-.social-btn{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:16px;cursor:pointer;transition:all .2s;text-decoration:none}
-.social-btn:hover{background:var(--gold);border-color:var(--gold)}
-.footer-col h4{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:var(--white);margin-bottom:20px}
-.footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-links a{text-decoration:none;color:rgba(255,255,255,.6);font-size:13px;transition:color .2s;font-weight:300}
-.footer-links a:hover{color:var(--gold-light)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;color:rgba(255,255,255,.4);flex-wrap:wrap;gap:8px}
-
-/* ──────────────── MODAL / LIGHTBOX ──────────────── */
-.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:2000;display:none;align-items:center;justify-content:center;padding:20px}
-.modal-overlay.open{display:flex}
-.modal-box{background:var(--white);border-radius:4px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;padding:48px 44px;position:relative;animation:slideUp .3s ease}
-.modal-close{position:absolute;top:16px;right:16px;width:32px;height:32px;border:none;background:var(--cream);border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;color:var(--text-mid);transition:all .2s}
-.modal-close:hover{background:var(--pink-light)}
-.lightbox-overlay{position:fixed;inset:0;background:rgba(0,0,0,.92);z-index:2000;display:none;align-items:center;justify-content:center}
-.lightbox-overlay.open{display:flex}
-.lightbox-close{position:absolute;top:20px;right:20px;width:44px;height:44px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:transparent;color:var(--white);font-size:22px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
-.lightbox-close:hover{background:rgba(255,255,255,.1)}
-.lightbox-img{max-width:90vw;max-height:85vh;border-radius:4px;object-fit:contain}
-
-/* ──────────────── SUCCESS STATE ──────────────── */
-.success-state{text-align:center;padding:20px}
-.success-icon{font-size:56px;margin-bottom:20px;display:block;animation:bounce .5s ease}
-.success-title{font-family:'Cormorant Garamond',serif;font-size:32px;color:var(--green-deep);font-weight:500;margin-bottom:10px}
-.success-msg{font-size:15px;color:var(--text-mid);line-height:1.6;font-weight:300}
-
-/* ──────────────── SCROLL REVEAL ──────────────── */
-.reveal{opacity:0;transform:translateY(30px);transition:all .6s cubic-bezier(.4,0,.2,1)}
-.reveal.visible{opacity:1;transform:translateY(0)}
-.reveal-delay-1{transition-delay:.1s}
-.reveal-delay-2{transition-delay:.2s}
-.reveal-delay-3{transition-delay:.3s}
-
-/* ──────────────── LOADING ──────────────── */
-.page-loader{position:fixed;inset:0;background:var(--cream);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;transition:opacity .5s}
-.page-loader.hidden{opacity:0;pointer-events:none}
-.loader-petal{width:60px;height:60px;position:relative;animation:spin 1.5s linear infinite}
-
-/* ──────────────── DARK MODE ──────────────── */
-body.dark{--cream:#0F1A17;--white:#162219;--pink-light:#2A1C1E;--gold-pale:#1A1808;--border:#2A3830;--text-dark:#F0EDE8;--text-mid:#B0ADA8;--text-light:#787570}
-.dark nav{background:rgba(15,26,23,0.95)}
-.dark .service-card{background:var(--white)}
-.dark .price-card:not(.featured){background:var(--white)}
-.dark .testimonial-card{background:var(--white)}
-.dark .contact-method{background:var(--white)}
-.dark .contact-form-card{background:var(--white)}
-.dark .form-input,.dark .form-select,.dark .form-textarea{background:var(--cream);color:var(--text-dark)}
-.dark .file-upload{background:var(--cream)}
-.dark .booking-form-wrap{background:rgba(22,34,25,.97)}
-.dark .booking-form-wrap .form-title{color:var(--gold-light)}
-.dark .booking-form-wrap .form-input,.dark .booking-form-wrap .form-select,.dark .booking-form-wrap .form-textarea{background:var(--cream);color:var(--text-dark);border-color:#2A3830}
-
-/* ──────────────── DARK MODE TOGGLE ──────────────── */
-.theme-toggle{width:38px;height:20px;background:var(--border);border-radius:10px;cursor:pointer;position:relative;transition:background .3s;border:none;flex-shrink:0}
-.theme-toggle::after{content:'';position:absolute;width:14px;height:14px;border-radius:50%;background:var(--white);top:3px;left:3px;transition:transform .3s;box-shadow:0 1px 4px rgba(0,0,0,.2)}
-body.dark .theme-toggle{background:var(--green)}
-body.dark .theme-toggle::after{transform:translateX(18px)}
-
-/* ──────────────── MOBILE ──────────────── */
-@media(max-width:1024px){
-  .hero-content{grid-template-columns:1fr;gap:40px}
-  .hero-visual{display:none}
-  .booking-grid{grid-template-columns:1fr;gap:40px}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
-  .pricing-grid{grid-template-columns:1fr;max-width:400px;margin:0 auto}
-  .contact-grid{grid-template-columns:1fr;gap:40px}
-  .gallery-grid{columns:2}
-}
-@media(max-width:768px){
-  .nav-links{display:none;position:fixed;top:72px;left:0;right:0;background:var(--cream);padding:20px 5%;flex-direction:column;gap:0;border-bottom:1px solid var(--border);z-index:999}
-  .nav-links.open{display:flex}
-  .nav-links li{border-bottom:1px solid var(--border)}
-  .nav-links a{display:block;padding:14px 0;font-size:15px}
-  .hamburger{display:flex}
-  section{padding:70px 5%}
-  .form-grid{grid-template-columns:1fr}
-  .hero-stats{flex-wrap:wrap;gap:20px}
-  .gallery-grid{columns:1}
-  .testimonials-track .testimonial-card{flex:0 0 100%}
-  .footer-grid{grid-template-columns:1fr;gap:32px}
-  .footer-bottom{flex-direction:column;text-align:center}
-}
-@media(max-width:480px){
-  .booking-form-wrap{padding:28px 20px}
-  .contact-form-card{padding:28px 20px}
-  .hero-actions{flex-direction:column}
-  .btn-primary,.btn-outline{text-align:center}
 }
 
-/* ──────────────── ANIMATIONS ──────────────── */
-@keyframes spin{to{transform:rotate(360deg)}}
-@keyframes bounce{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
-@keyframes slideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes petalFall{0%{transform:translateY(-20px) rotate(0deg);opacity:0}10%{opacity:1}100%{transform:translateY(100vh) rotate(720deg);opacity:0}}
+body.dark{
 
-/* ──────────────── ADMIN ──────────────── */
-.admin-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:3000;display:none;align-items:center;justify-content:center}
-.admin-overlay.open{display:flex}
-.admin-box{background:var(--white);border-radius:4px;width:min(900px,95vw);max-height:90vh;overflow-y:auto;padding:40px}
-.admin-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px;padding-bottom:20px;border-bottom:1px solid var(--border)}
-.admin-title{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--green-deep)}
-.booking-table{width:100%;border-collapse:collapse;font-size:13px}
-.booking-table th{text-align:left;padding:10px 14px;background:var(--cream);color:var(--text-mid);font-weight:600;font-size:11px;letter-spacing:.5px;text-transform:uppercase;border-bottom:1px solid var(--border)}
-.booking-table td{padding:12px 14px;border-bottom:1px solid var(--border);color:var(--text-dark);vertical-align:top}
-.booking-table tr:last-child td{border-bottom:none}
-.booking-table tr:hover td{background:var(--cream)}
-.status-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:600;letter-spacing:.5px;text-transform:uppercase}
-.status-new{background:#E8F5E9;color:#2E7D32}
-.status-confirmed{background:#E3F2FD;color:#1565C0}
-.status-pending{background:var(--gold-pale);color:var(--gold)}
+--bg:#0d1211;
+
+--card:rgba(16,20,19,.6);
+
+--text:#fff;
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+
+font-family:Inter;
+
+background:var(--bg);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+transition:.5s;
+
+}
+
+/*==========================*/
+
+img{
+
+width:100%;
+
+display:block;
+
+}
+
+.container{
+
+width:min(1200px,92%);
+
+margin:auto;
+
+}
+
+section{
+
+padding:100px 0;
+
+}
+
+.section-title{
+
+font-size:56px;
+
+font-family:'Cormorant Garamond';
+
+margin-bottom:20px;
+
+text-align:center;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+opacity:.7;
+
+margin-bottom:60px;
+
+}
+
+/*==========================
+NAVBAR
+==========================*/
+
+nav{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+backdrop-filter:blur(25px);
+
+background:rgba(255,255,255,.08);
+
+z-index:100;
+
+}
+
+.nav-inner{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:20px 0;
+
+}
+
+.logo{
+
+font-family:'Cormorant Garamond';
+
+font-size:34px;
+
+font-weight:700;
+
+color:var(--gold);
+
+}
+
+.menu{
+
+display:flex;
+
+gap:28px;
+
+}
+
+.menu a{
+
+text-decoration:none;
+
+color:var(--text);
+
+}
+
+.btn{
+
+padding:14px 28px;
+
+border-radius:999px;
+
+border:none;
+
+cursor:pointer;
+
+background:linear-gradient(
+135deg,
+var(--gold),
+#e6c56f
+);
+
+color:white;
+
+font-weight:600;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:translateY(-4px);
+
+}
+
+/*==========================
+HERO
+==========================*/
+
+.hero{
+
+height:100vh;
+
+display:flex;
+
+align-items:center;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.hero::before{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+90deg,
+rgba(0,0,0,.55),
+rgba(0,0,0,.2)
+),
+
+url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+.hero-content{
+
+position:relative;
+
+z-index:2;
+
+color:white;
+
+max-width:760px;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:12px 18px;
+
+border:1px solid rgba(255,255,255,.3);
+
+border-radius:999px;
+
+backdrop-filter:blur(18px);
+
+margin-bottom:30px;
+
+}
+
+.hero h1{
+
+font-size:92px;
+
+line-height:1;
+
+font-family:'Cormorant Garamond';
+
+}
+
+.hero p{
+
+margin:28px 0;
+
+font-size:22px;
+
+opacity:.92;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+.secondary{
+
+background:white;
+
+color:black;
+
+}
+
+/*==========================
+FLOAT FLOWERS
+==========================*/
+
+.flower{
+
+position:absolute;
+
+font-size:40px;
+
+opacity:.2;
+
+animation:float 12s infinite;
+
+}
+
+.f1{
+left:10%;
+top:20%;
+}
+
+.f2{
+right:15%;
+top:30%;
+}
+
+.f3{
+left:80%;
+bottom:15%;
+}
+
+@keyframes float{
+
+0%{
+transform:
+translateY(0)
+rotate(0deg);
+}
+
+50%{
+transform:
+translateY(-60px)
+rotate(15deg);
+}
+
+100%{
+transform:
+translateY(0);
+}
+
+}
+
+/*==========================
+ABOUT
+==========================*/
+
+.about-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:60px;
+
+align-items:center;
+
+}
+
+.card{
+
+background:var(--card);
+
+backdrop-filter:blur(18px);
+
+border-radius:var(--radius);
+
+padding:36px;
+
+box-shadow:
+0 20px 50px
+rgba(0,0,0,.08);
+
+}
+
+.about h3{
+
+font-size:52px;
+
+font-family:'Cormorant Garamond';
+
+margin-bottom:20px;
+
+}
+
+.about p{
+
+line-height:2;
+
+}
+
+.timeline{
+
+display:grid;
+
+gap:18px;
+
+margin-top:30px;
+
+}
+
+.timeline div{
+
+padding:20px;
+
+border-left:4px solid var(--gold);
+
+}
+
+/*==========================
+SERVICES
+==========================*/
+
+.services-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(
+auto-fit,
+minmax(280px,1fr)
+);
+
+gap:28px;
+
+}
+
+.service{
+
+overflow:hidden;
+
+transition:.5s;
+
+}
+
+.service:hover{
+
+transform:
+translateY(-12px);
+
+}
+
+.service img{
+
+height:280px;
+
+object-fit:cover;
+
+}
+
+.service-content{
+
+padding:30px;
+
+}
+
+.service h4{
+
+font-size:34px;
+
+font-family:
+'Cormorant Garamond';
+
+margin-bottom:12px;
+
+}
+
+.learn{
+
+margin-top:18px;
+
+display:inline-block;
+
+color:var(--gold);
+
+}
+
+/*==========================
+DARK MODE
+==========================*/
+
+.theme{
+
+background:none;
+
+border:none;
+
+font-size:26px;
+
+cursor:pointer;
+
+}
+
+/*==========================
+MOBILE
+==========================*/
+
+@media(max-width:900px){
+
+.hero h1{
+
+font-size:58px;
+
+}
+
+.about-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.menu{
+
+display:none;
+
+}
+
+.section-title{
+
+font-size:42px;
+
+}
+
+}
+
 </style>
 </head>
+
 <body>
 
-<!-- Page Loader -->
-<div class="page-loader" id="pageLoader">
-  <svg class="loader-petal" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="30" cy="12" r="8" fill="#E8A0B4" opacity=".9"/>
-    <circle cx="48" cy="24" r="8" fill="#C9A84C" opacity=".7"/>
-    <circle cx="48" cy="42" r="8" fill="#E8A0B4" opacity=".5"/>
-    <circle cx="30" cy="52" r="8" fill="#3D6B5A" opacity=".8"/>
-    <circle cx="12" cy="42" r="8" fill="#C9A84C" opacity=".6"/>
-    <circle cx="12" cy="24" r="8" fill="#E8A0B4" opacity=".4"/>
-    <circle cx="30" cy="30" r="6" fill="#2D4A3E"/>
-  </svg>
-  <p style="font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--green-deep);letter-spacing:2px">Saini Flower Decorators</p>
+<nav>
+
+<div class="container nav-inner">
+
+<div class="logo">
+
+SAINI FLOWER DECORATORS
+
 </div>
 
-<!-- Navigation -->
-<nav id="mainNav">
-  <div class="nav-inner">
-    <a href="#home" class="logo">
-      <div class="logo-icon">🌸</div>
-      <div class="logo-text">
-        <div class="logo-name">Saini Flower Decorators</div>
-        <div class="logo-tag">Floral Artistry Since 1987</div>
-      </div>
-    </a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#testimonials">Reviews</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#booking" class="nav-cta">Book Now</a></li>
-    </ul>
-    <div style="display:flex;align-items:center;gap:16px">
-      <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode" aria-label="Toggle theme"></button>
-      <button class="hamburger" id="hamburger" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
+<div class="menu">
+
+<a href="#">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#services">Services</a>
+
+<a href="#">Gallery</a>
+
+<a href="#">Pricing</a>
+
+<a href="#">Booking</a>
+
+<a href="#">Contact</a>
+
+</div>
+
+<div>
+
+<button
+class="theme"
+onclick="toggleTheme()">
+
+🌙
+
+</button>
+
+<button class="btn">
+
+Book Now
+
+</button>
+
+</div>
+
+</div>
+
 </nav>
 
-<!-- ═══════════════ HERO ═══════════════ -->
-<section id="home">
-  <div class="hero-bg"></div>
-  <!-- Decorative SVG Florals -->
-  <svg class="hero-floral-left" viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity=".8">
-      <ellipse cx="200" cy="300" rx="80" ry="120" fill="#E8A0B4" transform="rotate(-20,200,300)"/>
-      <ellipse cx="200" cy="300" rx="80" ry="120" fill="#C9A84C" transform="rotate(20,200,300)"/>
-      <ellipse cx="200" cy="300" rx="80" ry="120" fill="#E8A0B4" transform="rotate(60,200,300)"/>
-      <ellipse cx="200" cy="300" rx="80" ry="120" fill="#C9A84C" transform="rotate(100,200,300)"/>
-      <ellipse cx="200" cy="300" rx="80" ry="120" fill="#3D6B5A" transform="rotate(140,200,300)"/>
-      <circle cx="200" cy="300" r="30" fill="#2D4A3E"/>
-      <line x1="200" y1="420" x2="180" y2="580" stroke="#3D6B5A" stroke-width="3"/>
-      <ellipse cx="160" cy="500" rx="30" ry="50" fill="#3D6B5A" opacity=".5"/>
-      <ellipse cx="220" cy="540" rx="25" ry="40" fill="#2D4A3E" opacity=".4"/>
-    </g>
-  </svg>
-  <svg class="hero-floral-right" viewBox="0 0 380 480" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity=".7">
-      <ellipse cx="190" cy="200" rx="70" ry="110" fill="#F9E8EC" transform="rotate(-30,190,200)"/>
-      <ellipse cx="190" cy="200" rx="70" ry="110" fill="#E8D5A0" transform="rotate(30,190,200)"/>
-      <ellipse cx="190" cy="200" rx="70" ry="110" fill="#F9E8EC" transform="rotate(90,190,200)"/>
-      <ellipse cx="190" cy="200" rx="70" ry="110" fill="#E8D5A0" transform="rotate(150,190,200)"/>
-      <circle cx="190" cy="200" r="25" fill="#C9A84C"/>
-      <path d="M190 310 Q170 380 150 440" stroke="#3D6B5A" stroke-width="2.5" fill="none"/>
-      <ellipse cx="130" cy="420" rx="28" ry="45" fill="#3D6B5A" opacity=".4"/>
-    </g>
-  </svg>
+<!-- HERO -->
 
-  <div class="hero-content">
-    <div class="hero-text reveal">
-      <span class="hero-badge">✦ Delhi's Premier Floral Studio</span>
-      <h1 class="hero-headline serif">
-        Turning Every<br>Celebration Into<br>a <em>Floral Masterpiece</em>
-      </h1>
-      <span class="hero-script">Where Flowers Tell Your Story</span>
-      <p class="hero-sub">Premium flower decoration for   We craft breathtaking floral experiences that transform your special moments into timeless memories.</p>
-      <div class="hero-actions">
-        <a href="#booking" class="btn-primary">Book Your Event</a>
-        <a href="#gallery" class="btn-outline">View Gallery</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-num serif">10000+</div>
-          <div class="stat-label">Events Decorated</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num serif">40+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num serif">4.9★</div>
-          <div class="stat-label">Client Rating</div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-visual reveal reveal-delay-2">
-      <div class="hero-img-main">
-        <!-- Beautiful SVG floral art -->
-        <svg class="floral-svg" viewBox="0 0 400 500" fill="none" xmlns="http://www.w3.org/2000/svg" style="animation:float 6s ease-in-out infinite">
-          <!-- Background wash -->
-          <rect width="400" height="500" fill="url(#heroGrad)"/>
-          <defs>
-            <radialGradient id="heroGrad" cx="50%" cy="40%" r="70%">
-              <stop offset="0%" stop-color="#F9E8EC"/>
-              <stop offset="100%" stop-color="#E8C8D4"/>
-            </radialGradient>
-          </defs>
-          <!-- Arch frame -->
-          <path d="M80 500 L80 200 Q80 80 200 80 Q320 80 320 200 L320 500" stroke="#C4637D" stroke-width="2" fill="rgba(255,255,255,0.3)"/>
-          <!-- Main roses cluster -->
-          <g transform="translate(200,180)">
-            <!-- Rose petals -->
-            <ellipse cx="0" cy="-30" rx="22" ry="38" fill="#E8A0B4" transform="rotate(0)"/>
-            <ellipse cx="0" cy="-30" rx="22" ry="38" fill="#D4809A" transform="rotate(60)"/>
-            <ellipse cx="0" cy="-30" rx="22" ry="38" fill="#E8A0B4" transform="rotate(120)"/>
-            <ellipse cx="0" cy="-30" rx="22" ry="38" fill="#D4809A" transform="rotate(180)"/>
-            <ellipse cx="0" cy="-30" rx="22" ry="38" fill="#E8A0B4" transform="rotate(240)"/>
-            <ellipse cx="0" cy="-30" rx="22" ry="38" fill="#D4809A" transform="rotate(300)"/>
-            <circle cx="0" cy="0" r="18" fill="#C4637D"/>
-            <circle cx="0" cy="0" r="10" fill="#B8526C"/>
-          </g>
-          <!-- Side roses -->
-          <g transform="translate(120,260)">
-            <ellipse cx="0" cy="-20" rx="16" ry="28" fill="#F0B8C8" transform="rotate(0)"/>
-            <ellipse cx="0" cy="-20" rx="16" ry="28" fill="#E0A0B5" transform="rotate(72)"/>
-            <ellipse cx="0" cy="-20" rx="16" ry="28" fill="#F0B8C8" transform="rotate(144)"/>
-            <ellipse cx="0" cy="-20" rx="16" ry="28" fill="#E0A0B5" transform="rotate(216)"/>
-            <ellipse cx="0" cy="-20" rx="16" ry="28" fill="#F0B8C8" transform="rotate(288)"/>
-            <circle cx="0" cy="0" r="12" fill="#D4809A"/>
-          </g>
-          <g transform="translate(280,260)">
-            <ellipse cx="0" cy="-18" rx="14" ry="25" fill="#EDA0BC" transform="rotate(30)"/>
-            <ellipse cx="0" cy="-18" rx="14" ry="25" fill="#D890A8" transform="rotate(102)"/>
-            <ellipse cx="0" cy="-18" rx="14" ry="25" fill="#EDA0BC" transform="rotate(174)"/>
-            <ellipse cx="0" cy="-18" rx="14" ry="25" fill="#D890A8" transform="rotate(246)"/>
-            <ellipse cx="0" cy="-18" rx="14" ry="25" fill="#EDA0BC" transform="rotate(318)"/>
-            <circle cx="0" cy="0" r="10" fill="#C4637D"/>
-          </g>
-          <!-- Greenery -->
-          <path d="M150 320 Q130 380 110 440 Q140 410 160 360 Z" fill="#3D6B5A" opacity=".8"/>
-          <path d="M250 320 Q270 380 290 440 Q260 410 240 360 Z" fill="#2D4A3E" opacity=".8"/>
-          <path d="M200 320 Q190 390 200 460 Q210 390 200 320" stroke="#3D6B5A" stroke-width="3" fill="none"/>
-          <!-- Small flowers scattered -->
-          <g transform="translate(155,140)">
-            <circle cx="0" cy="-10" r="7" fill="#C9A84C" opacity=".9"/>
-            <circle cx="9" cy="5" r="7" fill="#C9A84C" opacity=".9"/>
-            <circle cx="-9" cy="5" r="7" fill="#C9A84C" opacity=".9"/>
-            <circle cx="0" cy="0" r="5" fill="#E8D5A0"/>
-          </g>
-          <g transform="translate(248,138)">
-            <circle cx="0" cy="-8" r="6" fill="#E8A0B4" opacity=".9"/>
-            <circle cx="7" cy="4" r="6" fill="#E8A0B4" opacity=".9"/>
-            <circle cx="-7" cy="4" r="6" fill="#E8A0B4" opacity=".9"/>
-            <circle cx="0" cy="0" r="4" fill="#C4637D"/>
-          </g>
-          <!-- Pearls / decorative dots -->
-          <circle cx="140" cy="200" r="4" fill="white" opacity=".9"/>
-          <circle cx="260" cy="200" r="4" fill="white" opacity=".9"/>
-          <circle cx="170" cy="155" r="3" fill="white" opacity=".7"/>
-          <circle cx="230" cy="155" r="3" fill="white" opacity=".7"/>
-          <!-- Text overlay -->
-          <text x="200" y="490" text-anchor="middle" font-family="'Great Vibes',cursive" font-size="22" fill="#C4637D" opacity=".8">Saini Flower Decorators</text>
-        </svg>
-      </div>
-      <div class="hero-img-badge">
-        <div class="badge-icon">🏆</div>
-        <div>
-          <div class="badge-text">Best Decorators 2024</div>
-          <div class="badge-sub">Delhi Events Awards</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="hero">
 
-<!-- ═══════════════ SERVICES ═══════════════ -->
-<section id="services">
-  <div class="section-inner">
-    <div class="section-header center reveal">
-      <span class="section-eyebrow">What We Create</span>
-      <h2 class="section-title serif">Our <em>Signature</em> Services</h2>
-      <div class="divider"></div>
-      <p class="section-sub">From intimate celebrations to grand events, we bring your floral vision to life with artistry and passion.</p>
-    </div>
-    <div class="services-grid" id="servicesGrid"></div>
-  </div>
-</section>
-
-<!-- ═══════════════ GALLERY ═══════════════ -->
-<section id="gallery">
-  <div class="section-inner">
-    <div class="section-header center reveal">
-      <span class="section-eyebrow">Our Portfolio</span>
-      <h2 class="section-title serif">A Glimpse of <em>Our Work</em></h2>
-      <div class="divider"></div>
-      <p class="section-sub">Each event is a canvas. Each flower is a brushstroke. Explore our gallery of floral masterpieces.</p>
-    </div>
-    <div class="gallery-filters reveal" id="galleryFilters"></div>
-    <div class="gallery-grid reveal" id="galleryGrid"></div>
-  </div>
-</section>
-
-<!-- ═══════════════ BOOKING ═══════════════ -->
-<section id="booking">
-  <div class="section-inner">
-    <div class="booking-grid">
-      <div class="booking-info reveal">
-        <span class="section-eyebrow">Reserve Your Date</span>
-        <h2 class="section-title serif" style="color:var(--white)">Book Your <em style="color:var(--gold-light)">Dream</em> Decoration</h2>
-        <p class="section-sub" style="color:rgba(255,255,255,.7)">Fill in your event details and our floral designers will contact you within 24 hours with a personalized proposal.</p>
-        <div class="booking-features">
-          <div class="booking-feat"><div class="feat-icon">🌸</div><div><strong style="font-weight:500">Personal Consultation</strong><br>Every booking includes a free design consultation with our lead decorator.</div></div>
-          <div class="booking-feat"><div class="feat-icon">✨</div><div><strong style="font-weight:500">Custom Design</strong><br>100% bespoke arrangements tailored to your theme, color palette, and venue.</div></div>
-          <div class="booking-feat"><div class="feat-icon">🚚</div><div><strong style="font-weight:500">Full Setup & Takedown</strong><br>Our team handles everything — from delivery to dismantling after your event.</div></div>
-          <div class="booking-feat"><div class="feat-icon">📸</div><div><strong style="font-weight:500">Photo-Ready Guarantee</strong><br>Every arrangement is designed to look stunning in photographs.</div></div>
-        </div>
-      </div>
-      <div class="booking-form-wrap reveal reveal-delay-2">
-        <div id="bookingFormContent">
-          <h3 class="form-title serif">Request a Booking</h3>
-          <p class="form-sub">Free quote within 24 hours — no commitment required</p>
-          <form id="bookingForm">
-            <div class="form-grid">
-              <div class="form-group">
-                <label class="form-label">Murarii lal Saini*</label>
-                <input type="text" class="form-input" id="bName" placeholder="Priya Sharma" required/>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Mobile Number *</label>
-                <input type="tel" class="form-input" id="bPhone" placeholder="+91 98765 43210" required/>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Email Address *</label>
-                <input type="email" class="form-input" id="bEmail" placeholder="priya@email.com" required/>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Event Type *</label>
-                <select class="form-select" id="bEventType" required>
-                  <option value="">Select Event</option>
-                  <option>Wedding Decoration</option>
-                  <option>Birthday Decoration</option>
-                  <option>Stage Decoration</option>
-                  <option>Mandap Decoration</option>
-                  <option>Haldi Decoration</option>
-                  <option>Anniversary Decoration</option>
-                  <option>Car Decoration</option>
-                  <option>Corporate Event</option>
-                  <option>Home Decoration</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Event Date *</label>
-                <input type="date" class="form-input" id="bDate" required/>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Budget Range</label>
-                <select class="form-select" id="bBudget">
-                  <option value="">Select Budget</option>
-                  <option>₹15,000 – ₹30,000</option>
-                  <option>₹30,000 – ₹60,000</option>
-                  <option>₹60,000 – ₹1,00,000</option>
-                  <option>₹1,00,000 – ₹2,50,000</option>
-                  <option>₹2,50,000+</option>
-                </select>
-              </div>
-              <div class="form-group full">
-                <label class="form-label">Event Location *</label>
-                <input type="text" class="form-input" id="bLocation" placeholder="Venue name & address" required/>
-              </div>
-              <div class="form-group full">
-                <label class="form-label">Decoration Package</label>
-                <select class="form-select" id="bPackage">
-                  <option value="">Select Package</option>
-                  <option>Basic Bloom — ₹15,000+</option>
-                  <option>Premium Petals — ₹45,000+</option>
-                  <option>Luxury Blossom — ₹1,20,000+</option>
-                  <option>Custom Arrangement</option>
-                </select>
-              </div>
-              <div class="form-group full">
-                <label class="form-label">Special Notes / Requirements</label>
-                <textarea class="form-textarea" id="bNotes" placeholder="Color preferences, theme ideas, special requirements..."></textarea>
-              </div>
-              <div class="form-group full">
-                <label class="form-label">Upload Reference Image (Optional)</label>
-                <label class="file-upload" id="fileUploadLabel">
-                  <input type="file" id="bImage" accept="image/*"/>
-                  <span class="file-upload-icon">📎</span>
-                  <p class="file-upload-text">Click to upload or drag & drop<br><span style="color:var(--gold);font-size:11px">PNG, JPG up to 10MB</span></p>
-                </label>
-                <div id="filePreview" style="margin-top:8px;font-size:12px;color:var(--gold)"></div>
-              </div>
-            </div>
-            <button type="submit" class="btn-submit" id="submitBtn">✦ Send Booking Request</button>
-          </form>
-        </div>
-        <div id="bookingSuccess" style="display:none">
-          <div class="success-state">
-            <span class="success-icon">🌸</span>
-            <h3 class="success-title serif">Booking Received!</h3>
-            <p class="success-msg">Thank you! Our team will contact you within <strong>24 hours</strong> with a personalized quote. A confirmation has been sent to your email.</p>
-            <div style="margin-top:24px;padding:20px;background:var(--cream);border-radius:4px;border:1px solid var(--border)">
-              <p style="font-size:13px;color:var(--text-light)">Booking Reference</p>
-              <p style="font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--green-deep);font-weight:600" id="bookingRef"></p>
-            </div>
-            <button class="btn-primary" style="margin-top:24px;border:none;cursor:pointer" onclick="document.getElementById('bookingSuccess').style.display='none';document.getElementById('bookingFormContent').style.display='block'">Make Another Booking</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-<!-- ═══════════════ FOOTER ═══════════════ -->
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="logo" style="margin-bottom:14px">
-          <div class="logo-icon">🌸</div>
-          <div class="logo-text">
-            <div class="logo-name">Saini Flower Decorators</div>
-            <div class="logo-tag">Floral Artistry Since 2005</div>
-          </div>
-        </div>
-        <p class="footer-desc">Delhi's most trusted floral decoration studio, turning everyday celebrations into extraordinary floral experiences for over 18 years.</p>
-        <div class="footer-social">
-          <a class="social-btn" href="#" title="Instagram">📷</a>
-          <a class="social-btn" href="#" title="Facebook">📘</a>
-          <a class="social-btn" href="#" title="Pinterest">📌</a>
-          <a class="social-btn" href="#" title="YouTube">▶️</a>
-        </div>
-      </div>
-      <div class="footer-col">
-        <h4>Our Services</h4>
-        <ul class="footer-links">
-          <li><a href="#">Wedding Decoration</a></li>
-          <li><a href="#">Birthday Decoration</a></li>
-          <li><a href="#">Stage Decoration</a></li>
-          <li><a href="#">Mandap Decoration</a></li>
-          <li><a href="#">Haldi Decoration</a></li>
-          <li><a href="#">Car Decoration</a></li>
-          <li><a href="#">Corporate Events</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Quick Links</h4>
-        <ul class="footer-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#testimonials">Reviews</a></li>
-          <li><a href="#booking">Book Now</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Contact Us</h4>
-        <ul class="footer-links">
-          <li><a href="tel:+919876543210">📞 +91 98765 43210</a></li>
-          <li><a href="https://wa.me/919876543210">💬 WhatsApp</a></li>
-          <li><a href="mailto:hello@sainiflowerdecorators.com">📧 hello@sainiflower...</a></li>
-          <li style="color:rgba(255,255,255,.5);font-size:13px;font-weight:300;padding-top:4px">📍 Saini Flower Market<br>Ashram, Delhi – 110096</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2024 Saini Flower Decorators. All rights reserved.</span>
-      <span>Made with 🌸 in Delhi, India</span>
-      <div style="display:flex;gap:16px">
-        <a href="#" style="color:rgba(255,255,255,.4);text-decoration:none;font-size:12px">Privacy Policy</a>
-        <a href="#" style="color:rgba(255,255,255,.4);text-decoration:none;font-size:12px">Terms of Service</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Floating Actions -->
-<div class="floating-actions">
-  <a href="https://wa.me/919876543210" class="float-btn float-whatsapp" title="WhatsApp Us">💬</a>
-  <a href="tel:+919876543210" class="float-btn float-call" title="Call Us">📞</a>
+<div class="flower f1">
+🌸
 </div>
 
-<!-- Lightbox -->
-<div class="lightbox-overlay" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
-  <svg id="lightboxImg" viewBox="0 0 600 400" style="max-width:90vw;max-height:85vh;border-radius:4px"></svg>
+<div class="flower f2">
+🌺
 </div>
 
-<!-- Admin Modal -->
-<div class="admin-overlay" id="adminOverlay">
-  <div class="admin-box">
-    <div class="admin-header">
-      <h2 class="admin-title serif">Admin Dashboard — Bookings</h2>
-      <button class="modal-close" onclick="document.getElementById('adminOverlay').classList.remove('open')">✕</button>
-    </div>
-    <div id="adminContent"></div>
-  </div>
+<div class="flower f3">
+🌷
 </div>
+
+<div class="container">
+
+<div class="hero-content">
+
+<div class="badge">
+
+Royal Event Decoration Since 1987
+
+</div>
+
+<h1>
+
+SAINI FLOWER DECORATORS
+
+</h1>
+
+<p>
+
+Decorating Memories With Flowers
+
+Premium luxury decoration
+crafted with elegance.
+
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn">
+
+Book Decoration
+
+</button>
+
+<button
+class="btn secondary">
+
+Explore Our Work
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section
+class="about"
+id="about">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Our Legacy
+
+</h2>
+
+<p class="subtitle">
+
+Royal Floral Craftsmanship
+Since 1987
+
+</p>
+
+<div class="about-grid">
+
+<div class="card">
+
+<h3>
+
+A Family Tradition
+
+</h3>
+
+<p>
+
+For decades,
+SAINI FLOWER DECORATORS
+has transformed
+events into memories.
+
+Luxury styling,
+careful craftsmanship,
+and timeless elegance.
+
+Every flower placement
+tells a story.
+
+</p>
+
+<div class="timeline">
+
+<div>
+
+1987 — Foundation
+
+</div>
+
+<div>
+
+2000 — Premium Events
+
+</div>
+
+<div>
+
+2015 — Royal Expansion
+
+</div>
+
+<div>
+
+Today — Luxury Excellence
+
+</div>
+
+</div>
+
+</div>
+
+<div>
+
+<img
+src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1000&q=80">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section
+id="services">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Our Decorations
+
+</h2>
+
+<p class="subtitle">
+
+Luxury crafted floral experiences
+
+</p>
+
+<div
+class="services-grid"
+id="servicesGrid">
+
+</div>
+
+</div>
+
+</section>
 
 <script>
-// ────────────────────────────────────────────────────────
-// DATA
-// ────────────────────────────────────────────────────────
-const SERVICES = [
-  {emoji:'💐',name:'Wedding Decoration',desc:'Complete floral design for your wedding day — from entrance arches to reception centerpieces, mandaps, and everything in between.',badge:'Most Booked',color:'#F9E8EC'},
-  {emoji:'🎂',name:'Birthday Decoration',desc:'Fun, personalized balloon and flower combinations that make every birthday unforgettable — from intimate gatherings to grand parties.',color:'#FAF5E8'},
-  {emoji:'🎪',name:'Stage Decoration',desc:'Breathtaking stage setups with cascading floral backdrops, lighting, and themed arrangements that photograph beautifully.',color:'#F0F5EA'},
-  {emoji:'🕌',name:'Mandap Decoration',desc:'Traditional and fusion mandap designs adorned with fresh flowers, draping, and sacred elements for your wedding ceremony.',badge:'Specialty',color:'#F9E8EC'},
-  {emoji:'🌼',name:'Haldi Decoration',desc:'Vibrant marigold-centric setups with turmeric-yellow and orange tones that create the perfect festive atmosphere.',color:'#FAF5E8'},
-  {emoji:'💝',name:'Anniversary Decoration',desc:'Romantic floral setups with rose petal art, candles, and elegant arrangements for milestone anniversaries.',color:'#FEF0F4'},
-  {emoji:'🚗',name:'Car Decoration',desc:'Elegant floral car decorations for the wedding procession — from traditional to modern, customized to your theme.',color:'#F0F5EA'},
-  {emoji:'🏢',name:'Corporate Events',desc:'Sophisticated floral arrangements for corporate galas, award nights, product launches, and conference setups.',color:'#FAF5E8'},
-  {emoji:'🏠',name:'Home Decoration',desc:'Transform your home for festivals, puja ceremonies, or family gatherings with beautiful fresh flower arrangements.',color:'#F9E8EC'},
-];
 
-const GALLERY_ITEMS = [
-  {category:'Wedding',label:'Grand Wedding Arch',h:280},
-  {category:'Birthday',label:'Birthday Garden Setup',h:200},
-  {category:'Wedding',label:'Floral Mandap',h:340},
-  {category:'Stage',label:'Stage Backdrop',h:220},
-  {category:'Haldi',label:'Haldi Ceremony',h:260},
-  {category:'Wedding',label:'Rose Aisle Decor',h:300},
-  {category:'Anniversary',label:'Anniversary Dinner',h:240},
-  {category:'Birthday',label:'Kids Party Decor',h:200},
-  {category:'Corporate',label:'Gala Event Setup',h:280},
-  {category:'Wedding',label:'Bridal Entry Arch',h:320},
-  {category:'Stage',label:'Award Night Stage',h:240},
-  {category:'Home',label:'Festival Home Decor',h:200},
-];
+const servicesData=[
 
-const GALLERY_COLORS = [
-  ['#F9E8EC','#E8A0B4','#C4637D'],
-  ['#FAF5E8','#C9A84C','#8B6914'],
-  ['#F0F5EA','#3D6B5A','#2D4A3E'],
-  ['#FEF0F4','#F4A0B8','#C4507A'],
-  ['#FAF0E0','#E8C070','#A87830'],
-  ['#E8F0F8','#7AA0C4','#3A6090'],
-];
+{
 
-const TESTIMONIALS = [
-  {text:"Saini Flower Decorators turned our wedding into a dream! The mandap decoration was beyond anything we imagined — every guest was in awe. Truly the best in Delhi.",name:"Neha & Rahul Verma",event:"Wedding — December 2023",avatar:"💑",bg:"#F9E8EC"},
-  {text:"Booked them for my daughter's birthday and they created a magical garden theme. The attention to detail was extraordinary. Will definitely book again!",name:"Sunita Agarwal",event:"Birthday — October 2023",avatar:"🌸",bg:"#FAF5E8"},
-  {text:"The stage decoration for our corporate annual gala was stunning. Professional team, on-time delivery, and the flowers were perfectly fresh throughout the evening.",name:"Amit Khanna",event:"Corporate Event — November 2023",avatar:"🏢",bg:"#F0F5EA"},
-  {text:"Our anniversary surprise setup was absolutely breathtaking. Rose petals, candles, and floral archways — my wife cried happy tears. Thank you Saini team!",name:"Vikram Mehra",event:"Anniversary — February 2024",avatar:"💝",bg:"#FEF0F4"},
-  {text:"Hired them for haldi and wedding decoration both. Saved so much stress! The marigold work for haldi was vibrant and the wedding flowers were elite quality.",name:"Pooja & Arjun Singh",event:"Wedding + Haldi — January 2024",avatar:"💐",bg:"#F9E8EC"},
-  {text:"The car decoration was unique and elegant. So many compliments during the baraat procession. The team was very cooperative and followed our color theme perfectly.",name:"Kavita Sharma",event:"Wedding Car — March 2024",avatar:"🚗",bg:"#F0F5EA"},
-];
+title:"Event Decoration",
 
-const PACKAGES = [
-  {tier:'Basic',name:'Basic Bloom',price:'₹15,000',period:'starting price',features:['Fresh seasonal flower arrangements','Up to 3 decoration zones','Basic entrance arch','2-hour setup window','1 decorator on site','3-hour fresh flower guarantee'],btnClass:'btn-price-outline'},
-  {tier:'Premium',name:'Premium Petals',price:'₹45,000',period:'starting price',features:['Premium & exotic flowers','Up to 8 decoration zones','Designer entrance + stage arch','Photo booth flower wall','4 decorators on site','Full venue transformation','Complimentary consultation','7-hour fresh flower guarantee'],badge:'Most Popular',btnClass:'btn-price-solid',featured:true},
-  {tier:'Luxury',name:'Luxury Blossom',price:'₹1,20,000',period:'starting price',features:['Imported & premium exotic flowers','Entire venue decoration','Custom mandap / arch design','LED + floral backdrop wall','8+ decorators on site','Day-before setup option','Dedicated event coordinator','Photography-styled arrangement','Unlimited design revisions'],btnClass:'btn-price-outline'},
-];
+img:
+"https://images.unsplash.com/photo-1519741497674-611481863552",
 
-// ────────────────────────────────────────────────────────
-// LOCAL BOOKINGS STORAGE (simulates backend)
-// ────────────────────────────────────────────────────────
-const getBookings = () => JSON.parse(localStorage.getItem('saini_bookings') || '[]');
-const saveBooking = b => {const arr=getBookings();arr.push(b);localStorage.setItem('saini_bookings',JSON.stringify(arr))};
+desc:
+"Luxury decoration for celebrations and gatherings."
 
-// ────────────────────────────────────────────────────────
-// RENDER SERVICES
-// ────────────────────────────────────────────────────────
-function renderServices(){
-  const g = document.getElementById('servicesGrid');
-  g.innerHTML = SERVICES.map((s,i)=>`
-    <div class="service-card reveal reveal-delay-${(i%3)+1}" onclick="scrollToBooking('${s.name}')">
-      <div class="service-card-img">
-        <div class="img-bg" style="background:${s.color}">
-          <svg viewBox="0 0 280 220" width="280" height="220" xmlns="http://www.w3.org/2000/svg">
-            <rect width="280" height="220" fill="${s.color}"/>
-            <text x="140" y="100" text-anchor="middle" font-size="60">${s.emoji}</text>
-            <text x="140" y="140" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="16" fill="#2D4A3E" opacity=".7">${s.name}</text>
-          </svg>
-        </div>
-        ${s.badge?`<span class="service-badge">${s.badge}</span>`:''}
-      </div>
-      <div class="service-card-body">
-        <h3 class="service-card-title serif">${s.name}</h3>
-        <p class="service-card-desc">${s.desc}</p>
-        <span class="service-card-link">Learn More</span>
-      </div>
-    </div>
-  `).join('');
+},
+
+{
+
+title:"Mandap Decoration",
+
+img:
+"https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+
+desc:
+"Royal floral mandap concepts."
+
+},
+
+{
+
+title:"Stage Decoration",
+
+img:
+"https://images.unsplash.com/photo-1520854221256-17451cc331bf",
+
+desc:
+"Premium floral stage styling."
+
+},
+
+{
+
+title:"Car Decoration",
+
+img:
+"https://images.unsplash.com/photo-1502877338535-766e1452684a",
+
+desc:
+"Elegant decoration for occasions."
+
+},
+
+{
+
+title:"Corporate Decoration",
+
+img:
+"https://images.unsplash.com/photo-1511578314322",
+
+desc:
+"Professional premium styling."
+
 }
 
-// ────────────────────────────────────────────────────────
-// RENDER GALLERY
-// ────────────────────────────────────────────────────────
-let activeFilter = 'All';
-function renderGallery(){
-  const categories = ['All',...new Set(GALLERY_ITEMS.map(g=>g.category))];
-  document.getElementById('galleryFilters').innerHTML = categories.map(c=>
-    `<button class="filter-btn${c===activeFilter?' active':''}" onclick="setFilter('${c}')">${c}</button>`
-  ).join('');
-  const items = activeFilter==='All' ? GALLERY_ITEMS : GALLERY_ITEMS.filter(g=>g.category===activeFilter);
-  document.getElementById('galleryGrid').innerHTML = items.map((item,i)=>{
-    const cols = GALLERY_COLORS[i%GALLERY_COLORS.length];
-    return `
-      <div class="gallery-item" onclick="openLightbox(${i})">
-        <svg viewBox="0 0 300 ${item.h}" width="100%" style="height:${item.h}px" xmlns="http://www.w3.org/2000/svg">
-          <defs><radialGradient id="g${i}" cx="50%" cy="40%" r="70%">
-            <stop offset="0%" stop-color="${cols[0]}"/>
-            <stop offset="100%" stop-color="${cols[1]}"/>
-          </radialGradient></defs>
-          <rect width="300" height="${item.h}" fill="url(#g${i})"/>
-          ${generateFlowerSVG(150, item.h/2-20, cols[1], cols[2], item.h)}
-          <text x="150" y="${item.h-16}" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="14" fill="${cols[2]}" opacity=".8">${item.label}</text>
-        </svg>
-        <div class="gallery-overlay">
-          <span class="gallery-caption">${item.label}</span>
-        </div>
-      </div>
-    `;
-  }).join('');
-}
-function setFilter(f){activeFilter=f;renderGallery()}
+]
 
-function generateFlowerSVG(cx, cy, petal, center, h){
-  const r = Math.min(h*0.18, 50);
-  let petals='';
-  for(let i=0;i<6;i++){
-    petals+=`<ellipse cx="${cx}" cy="${cy-r}" rx="${r*0.35}" ry="${r*0.65}" fill="${petal}" transform="rotate(${i*60},${cx},${cy})" opacity="${0.6+i*0.06}"/>`;
-  }
-  return `${petals}<circle cx="${cx}" cy="${cy}" r="${r*0.28}" fill="${center}"/>`;
-}
+const grid=
+document
+.getElementById(
+"servicesGrid"
+)
 
-// ────────────────────────────────────────────────────────
-// LIGHTBOX
-// ────────────────────────────────────────────────────────
-function openLightbox(i){
-  const item = GALLERY_ITEMS[i%GALLERY_ITEMS.length];
-  const cols = GALLERY_COLORS[i%GALLERY_COLORS.length];
-  const svg = document.getElementById('lightboxImg');
-  svg.setAttribute('viewBox','0 0 600 400');
-  svg.innerHTML = `
-    <defs><radialGradient id="lg" cx="50%" cy="40%" r="70%">
-      <stop offset="0%" stop-color="${cols[0]}"/>
-      <stop offset="100%" stop-color="${cols[1]}"/>
-    </radialGradient></defs>
-    <rect width="600" height="400" fill="url(#lg)" rx="4"/>
-    ${generateFlowerSVG(300,180,cols[1],cols[2],400)}
-    <text x="300" y="350" text-anchor="middle" font-family="'Cormorant Garamond',serif" font-size="22" fill="${cols[2]}" opacity=".9">${item.label}</text>
-    <text x="300" y="375" text-anchor="middle" font-family="'Jost',sans-serif" font-size="12" fill="${cols[2]}" opacity=".6">${item.category} Decoration</text>
-  `;
-  document.getElementById('lightbox').classList.add('open');
-}
-document.getElementById('lightboxClose').onclick=()=>document.getElementById('lightbox').classList.remove('open');
-document.getElementById('lightbox').onclick=e=>{if(e.target===document.getElementById('lightbox'))document.getElementById('lightbox').classList.remove('open')};
+servicesData
+.forEach(s=>{
 
-// ────────────────────────────────────────────────────────
-// PRICING
-// ────────────────────────────────────────────────────────
-function renderPricing(){
-  document.getElementById('pricingGrid').innerHTML = PACKAGES.map(p=>`
-    <div class="price-card${p.featured?' featured':''} reveal">
-      ${p.badge?`<div class="price-badge">${p.badge}</div>`:''}
-      <div class="price-tier">${p.tier}</div>
-      <div class="price-name serif">${p.name}</div>
-      <div class="price-amount serif">${p.price}</div>
-      <div class="price-period">${p.period}</div>
-      <div class="price-divider"></div>
-      <ul class="price-features">
-        ${p.features.map(f=>`<li>${f}</li>`).join('')}
-      </ul>
-      <button class="btn-price ${p.featured?'btn-price-featured':'btn-price-'+p.btnClass.split('-').pop()}" onclick="selectPackage('${p.name}')">
-        Book ${p.tier} →
-      </button>
-    </div>
-  `).join('');
-}
-function selectPackage(name){
-  document.getElementById('booking').scrollIntoView({behavior:'smooth'});
-  setTimeout(()=>{
-    const sel=document.getElementById('bPackage');
-    if(sel){for(let o of sel.options)if(o.text.startsWith(name.split(' ')[0]))sel.value=o.value}
-  },800);
+grid.innerHTML+=`
+
+<div class="card service">
+
+<img src="${s.img}">
+
+<div
+class="service-content">
+
+<h4>
+
+${s.title}
+
+</h4>
+
+<p>
+
+${s.desc}
+
+</p>
+
+<a
+class="learn">
+
+Learn More →
+
+</a>
+
+</div>
+
+</div>
+
+`
+
+})
+
+function toggleTheme(){
+
+document.body
+.classList
+.toggle("dark")
+
 }
 
-// ────────────────────────────────────────────────────────
-// TESTIMONIALS CAROUSEL
-// ────────────────────────────────────────────────────────
-let currentSlide=0;
-function renderTestimonials(){
-  document.getElementById('testimonialsTrack').innerHTML = TESTIMONIALS.map(t=>`
-    <div class="testimonial-card">
-      <div class="testimonial-rating">${'★'.repeat(5)}</div>
-      <p class="testimonial-text">${t.text}</p>
-      <div class="testimonial-author">
-        <div class="author-avatar" style="background:${t.bg};font-size:22px">${t.avatar}</div>
-        <div>
-          <div class="author-name">${t.name}</div>
-          <div class="author-event">${t.event}</div>
-        </div>
-      </div>
-    </div>
-  `).join('');
-  const dots=document.getElementById('carouselDots');
-  dots.innerHTML=TESTIMONIALS.map((_,i)=>`<div class="dot${i===0?' active':''}" onclick="goToSlide(${i})"></div>`).join('');
-}
-function updateCarousel(){
-  const track=document.getElementById('testimonialsTrack');
-  const w=track.parentElement.offsetWidth;
-  const cardW=w<768?w:w/3;
-  track.style.transform=`translateX(-${currentSlide*(cardW+28)}px)`;
-  document.querySelectorAll('.dot').forEach((d,i)=>{d.classList.toggle('active',i===currentSlide)});
-}
-function goToSlide(i){currentSlide=Math.max(0,Math.min(i,TESTIMONIALS.length-1));updateCarousel()}
-document.getElementById('prevBtn').onclick=()=>goToSlide(currentSlide-1);
-document.getElementById('nextBtn').onclick=()=>goToSlide(currentSlide+1);
-let autoPlay=setInterval(()=>goToSlide((currentSlide+1)%TESTIMONIALS.length),4500);
-document.querySelector('.testimonials-carousel').addEventListener('mouseenter',()=>clearInterval(autoPlay));
-document.querySelector('.testimonials-carousel').addEventListener('mouseleave',()=>{autoPlay=setInterval(()=>goToSlide((currentSlide+1)%TESTIMONIALS.length),4500)});
-
-// ────────────────────────────────────────────────────────
-// BOOKING FORM
-// ────────────────────────────────────────────────────────
-document.getElementById('bImage').addEventListener('change',function(){
-  const f=this.files[0];
-  document.getElementById('filePreview').textContent = f ? `✓ ${f.name} selected` : '';
-});
-
-document.getElementById('bookingForm').addEventListener('submit',async function(e){
-  e.preventDefault();
-  const btn=document.getElementById('submitBtn');
-  btn.disabled=true;
-  btn.textContent='Sending...';
-  // Simulate API call
-  await new Promise(r=>setTimeout(r,1500));
-  const booking = {
-    id: 'SFD-'+Date.now().toString(36).toUpperCase(),
-    name: document.getElementById('bName').value,
-    phone: document.getElementById('bPhone').value,
-    email: document.getElementById('bEmail').value,
-    eventType: document.getElementById('bEventType').value,
-    date: document.getElementById('bDate').value,
-    location: document.getElementById('bLocation').value,
-    budget: document.getElementById('bBudget').value,
-    package: document.getElementById('bPackage').value,
-    notes: document.getElementById('bNotes').value,
-    status: 'New',
-    createdAt: new Date().toISOString()
-  };
-  saveBooking(booking);
-  document.getElementById('bookingRef').textContent = booking.id;
-  document.getElementById('bookingFormContent').style.display='none';
-  document.getElementById('bookingSuccess').style.display='block';
-  btn.disabled=false;
-  btn.textContent='✦ Send Booking Request';
-});
-
-// Contact form
-document.getElementById('contactForm').addEventListener('submit',async function(e){
-  e.preventDefault();
-  const btn=document.getElementById('contactSubmitBtn');
-  btn.disabled=true;btn.textContent='Sending...';
-  await new Promise(r=>setTimeout(r,1000));
-  btn.textContent='✓ Message Sent!';btn.style.background='#3D6B5A';
-  setTimeout(()=>{btn.disabled=false;btn.textContent='Send Message →';btn.style.background='';this.reset()},3000);
-});
-
-function scrollToBooking(eventType){
-  document.getElementById('booking').scrollIntoView({behavior:'smooth'});
-  setTimeout(()=>{
-    const sel=document.getElementById('bEventType');
-    if(sel){for(let o of sel.options)if(o.value===eventType)sel.value=eventType}
-  },800);
-}
-
-// ────────────────────────────────────────────────────────
-// ADMIN DASHBOARD
-// ────────────────────────────────────────────────────────
-function openAdmin(){
-  const bookings=getBookings();
-  const content=document.getElementById('adminContent');
-  if(!bookings.length){
-    content.innerHTML='<p style="text-align:center;color:var(--text-light);padding:40px">No bookings yet. Submit the booking form to see entries here.</p>';
-  } else {
-    content.innerHTML=`
-      <div style="overflow-x:auto">
-        <table class="booking-table">
-          <thead><tr>
-            <th>Ref</th><th>Name</th><th>Event</th><th>Date</th><th>Budget</th><th>Status</th>
-          </tr></thead>
-          <tbody>
-            ${bookings.map(b=>`<tr>
-              <td style="font-family:monospace;font-size:11px">${b.id}</td>
-              <td><strong>${b.name}</strong><br><span style="font-size:11px;color:var(--text-light)">${b.phone}</span></td>
-              <td>${b.eventType||'—'}</td>
-              <td>${b.date||'—'}</td>
-              <td>${b.budget||'—'}</td>
-              <td><span class="status-badge status-${b.status==='New'?'new':b.status==='Confirmed'?'confirmed':'pending'}">${b.status}</span></td>
-            </tr>`).join('')}
-          </tbody>
-        </table>
-      </div>
-    `;
-  }
-  document.getElementById('adminOverlay').classList.add('open');
-}
-// Secret admin access: press 'A' key 3 times quickly
-let aCount=0,aTimer;
-document.addEventListener('keydown',e=>{
-  if(e.key==='a'||e.key==='A'){
-    aCount++;clearTimeout(aTimer);
-    aTimer=setTimeout(()=>aCount=0,1000);
-    if(aCount>=3){aCount=0;openAdmin()}
-  }
-});
-
-// ────────────────────────────────────────────────────────
-// SCROLL REVEAL
-// ────────────────────────────────────────────────────────
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')});
-},{threshold:.08});
-function setupReveal(){document.querySelectorAll('.reveal').forEach(el=>observer.observe(el))}
-
-// ────────────────────────────────────────────────────────
-// NAV BEHAVIOR
-// ────────────────────────────────────────────────────────
-document.getElementById('hamburger').onclick=function(){
-  document.getElementById('navLinks').classList.toggle('open');
-};
-document.querySelectorAll('.nav-links a').forEach(a=>{
-  a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open'));
-});
-window.addEventListener('scroll',()=>{
-  const nav=document.getElementById('mainNav');
-  nav.style.boxShadow = window.scrollY>20 ? '0 4px 20px rgba(0,0,0,.06)' : 'none';
-});
-
-// ────────────────────────────────────────────────────────
-// THEME TOGGLE
-// ────────────────────────────────────────────────────────
-const savedTheme=localStorage.getItem('saini_theme');
-if(savedTheme==='dark')document.body.classList.add('dark');
-document.getElementById('themeToggle').onclick=function(){
-  document.body.classList.toggle('dark');
-  localStorage.setItem('saini_theme',document.body.classList.contains('dark')?'dark':'light');
-};
-
-// ────────────────────────────────────────────────────────
-// MIN DATE FOR BOOKING
-// ────────────────────────────────────────────────────────
-document.getElementById('bDate').min = new Date().toISOString().split('T')[0];
-
-// ────────────────────────────────────────────────────────
-// INIT
-// ────────────────────────────────────────────────────────
-window.addEventListener('DOMContentLoaded',()=>{
-  renderServices();
-  renderGallery();
-  renderPricing();
-  renderTestimonials();
-  setTimeout(setupReveal,100);
-  // Hide loader
-  setTimeout(()=>{
-    document.getElementById('pageLoader').classList.add('hidden');
-    setTimeout(()=>document.getElementById('pageLoader').remove(),600);
-  },1200);
-});
-window.addEventListener('resize',updateCarousel);
 </script>
+
 </body>
 </html>
+```
