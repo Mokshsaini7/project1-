@@ -1,1063 +1,769 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SAINI FLOWER DECORATORS | Decorating Memories With Flowers</title>
+  <title>SAINI FLOWER DECORATORS | Decorating Memories With Flowers</title>
 
-<meta name="description"
-content="Premium Royal Flower Decoration Services Since 1987">
+  <meta name="description" content="Premium Royal Flower Decoration Services Since 1987">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
 
-<style>
-
-/*==========================
+  <style>
+    /*==========================
 CONFIG
 ==========================*/
 
-:root{
+    :root {
 
---gold:#C9A34E;
---ivory:#FFF8EF;
---pink:#F7D7DF;
---emerald:#0F5B4D;
---white:#FFFFFF;
+      --gold: #C9A34E;
+      --ivory: #FFF8EF;
+      --pink: #F7D7DF;
+      --emerald: #0F5B4D;
+      --white: #FFFFFF;
 
---bg:#fff8ef;
---card:rgba(255,255,255,.55);
+      --bg: #fff8ef;
+      --card: rgba(255, 255, 255, .55);
 
---text:#17211f;
+      --text: #17211f;
 
---radius:28px;
+      --radius: 28px;
 
-}
+    }
 
-body.dark{
+    body.dark {
 
---bg:#0d1211;
+      --bg: #0d1211;
 
---card:rgba(16,20,19,.6);
+      --card: rgba(16, 20, 19, .6);
 
---text:#fff;
+      --text: #fff;
 
-}
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-html{
-scroll-behavior:smooth;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-body{
+    body {
 
-font-family:Inter;
+      font-family: Inter;
 
-background:var(--bg);
+      background: var(--bg);
 
-color:var(--text);
+      color: var(--text);
 
-overflow-x:hidden;
+      overflow-x: hidden;
 
-transition:.5s;
+      transition: .5s;
 
-}
+    }
 
-/*==========================*/
+    /*==========================*/
 
-img{
+    img {
 
-width:100%;
+      width: 100%;
 
-display:block;
+      display: block;
 
-}
+    }
 
-.container{
+    .container {
 
-width:min(1200px,92%);
+      width: min(1200px, 92%);
 
-margin:auto;
+      margin: auto;
 
-}
+    }
 
-section{
+    section {
 
-padding:100px 0;
+      padding: 100px 0;
 
-}
+    }
 
-.section-title{
+    .section-title {
 
-font-size:56px;
+      font-size: 56px;
 
-font-family:'Cormorant Garamond';
+      font-family: 'Cormorant Garamond';
 
-margin-bottom:20px;
+      margin-bottom: 20px;
 
-text-align:center;
+      text-align: center;
 
-}
+    }
 
-.subtitle{
+    .subtitle {
 
-text-align:center;
+      text-align: center;
 
-opacity:.7;
+      opacity: .7;
 
-margin-bottom:60px;
+      margin-bottom: 60px;
 
-}
+    }
 
-/*==========================
+    /*==========================
 NAVBAR
 ==========================*/
 
-nav{
+    nav {
 
-position:fixed;
+      position: fixed;
 
-top:0;
+      top: 0;
 
-left:0;
+      left: 0;
 
-width:100%;
+      width: 100%;
 
-backdrop-filter:blur(25px);
+      backdrop-filter: blur(25px);
 
-background:rgba(255,255,255,.08);
+      background: rgba(255, 255, 255, .08);
 
-z-index:100;
+      z-index: 100;
 
-}
+    }
 
-.nav-inner{
+    .nav-inner {
 
-display:flex;
+      display: flex;
 
-justify-content:space-between;
+      justify-content: space-between;
 
-align-items:center;
+      align-items: center;
 
-padding:20px 0;
+      padding: 20px 0;
 
-}
+    }
 
-.logo{
+    .logo {
 
-font-family:'Cormorant Garamond';
+      font-family: 'Cormorant Garamond';
 
-font-size:34px;
+      font-size: 34px;
 
-font-weight:700;
+      font-weight: 700;
 
-color:var(--gold);
+      color: var(--gold);
 
-}
+    }
 
-.menu{
+    .menu {
 
-display:flex;
+      display: flex;
 
-gap:28px;
+      gap: 28px;
 
-}
+    }
 
-.menu a{
+    .menu a {
 
-text-decoration:none;
+      text-decoration: none;
 
-color:var(--text);
+      color: var(--text);
 
-}
+    }
 
-.btn{
+    .btn {
 
-padding:14px 28px;
+      padding: 14px 28px;
 
-border-radius:999px;
+      border-radius: 999px;
 
-border:none;
+      border: none;
 
-cursor:pointer;
+      cursor: pointer;
 
-background:linear-gradient(
-135deg,
-var(--gold),
-#e6c56f
-);
+      background: linear-gradient(135deg,
+          var(--gold),
+          #e6c56f);
 
-color:white;
+      color: white;
 
-font-weight:600;
+      font-weight: 600;
 
-transition:.4s;
+      transition: .4s;
 
-}
+    }
 
-.btn:hover{
+    .btn:hover {
 
-transform:translateY(-4px);
+      transform: translateY(-4px);
 
-}
+    }
 
-/*==========================
+    /*==========================
 HERO
 ==========================*/
 
-.hero{
+    .hero {
 
-height:100vh;
+      height: 100vh;
 
-display:flex;
+      display: flex;
 
-align-items:center;
+      align-items: center;
 
-position:relative;
+      position: relative;
 
-overflow:hidden;
+      overflow: hidden;
 
-}
+    }
 
-.hero::before{
+    .hero::before {
 
-content:"";
+      content: "";
 
-position:absolute;
+      position: absolute;
 
-inset:0;
+      inset: 0;
 
-background:
+      background:
 
-linear-gradient(
-90deg,
-rgba(0,0,0,.55),
-rgba(0,0,0,.2)
-),
+        linear-gradient(90deg,
+          rgba(0, 0, 0, .55),
+          rgba(0, 0, 0, .2)),
 
-url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=80");
+        url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=80");
 
-background-size:cover;
+      background-size: cover;
 
-background-position:center;
+      background-position: center;
 
-}
+    }
 
-.hero-content{
+    .hero-content {
 
-position:relative;
+      position: relative;
 
-z-index:2;
+      z-index: 2;
 
-color:white;
+      color: white;
 
-max-width:760px;
+      max-width: 760px;
 
-}
+    }
 
-.badge{
+    .badge {
 
-display:inline-block;
+      display: inline-block;
 
-padding:12px 18px;
+      padding: 12px 18px;
 
-border:1px solid rgba(255,255,255,.3);
+      border: 1px solid rgba(255, 255, 255, .3);
 
-border-radius:999px;
+      border-radius: 999px;
 
-backdrop-filter:blur(18px);
+      backdrop-filter: blur(18px);
 
-margin-bottom:30px;
+      margin-bottom: 30px;
 
-}
+    }
 
-.hero h1{
+    .hero h1 {
 
-font-size:92px;
+      font-size: 92px;
 
-line-height:1;
+      line-height: 1;
 
-font-family:'Cormorant Garamond';
+      font-family: 'Cormorant Garamond';
 
-}
+    }
 
-.hero p{
+    .hero p {
 
-margin:28px 0;
+      margin: 28px 0;
 
-font-size:22px;
+      font-size: 22px;
 
-opacity:.92;
+      opacity: .92;
 
-}
+    }
 
-.hero-buttons{
+    .hero-buttons {
 
-display:flex;
+      display: flex;
 
-gap:18px;
+      gap: 18px;
 
-flex-wrap:wrap;
+      flex-wrap: wrap;
 
-}
+    }
 
-.secondary{
+    .secondary {
 
-background:white;
+      background: white;
 
-color:black;
+      color: black;
 
-}
+    }
 
-/*==========================
+    /*==========================
 FLOAT FLOWERS
 ==========================*/
 
-.flower{
+    .flower {
 
-position:absolute;
+      position: absolute;
 
-font-size:40px;
+      font-size: 40px;
 
-opacity:.2;
+      opacity: .2;
 
-animation:float 12s infinite;
+      animation: float 12s infinite;
 
-}
+    }
 
-.f1{
-left:10%;
-top:20%;
-}
+    .f1 {
+      left: 10%;
+      top: 20%;
+    }
 
-.f2{
-right:15%;
-top:30%;
-}
+    .f2 {
+      right: 15%;
+      top: 30%;
+    }
 
-.f3{
-left:80%;
-bottom:15%;
-}
+    .f3 {
+      left: 80%;
+      bottom: 15%;
+    }
 
-@keyframes float{
+    @keyframes float {
 
-0%{
-transform:
-translateY(0)
-rotate(0deg);
-}
+      0% {
+        transform:
+          translateY(0) rotate(0deg);
+      }
 
-50%{
-transform:
-translateY(-60px)
-rotate(15deg);
-}
+      50% {
+        transform:
+          translateY(-60px) rotate(15deg);
+      }
 
-100%{
-transform:
-translateY(0);
-}
+      100% {
+        transform:
+          translateY(0);
+      }
 
-}
+    }
 
-/*==========================
+    /*==========================
 ABOUT
 ==========================*/
 
-.about-grid{
+    .about-grid {
 
-display:grid;
+      display: grid;
 
-grid-template-columns:1fr 1fr;
+      grid-template-columns: 1fr 1fr;
 
-gap:60px;
+      gap: 60px;
 
-align-items:center;
+      align-items: center;
 
-}
+    }
 
-.card{
+    .card {
 
-background:var(--card);
+      background: var(--card);
 
-backdrop-filter:blur(18px);
+      backdrop-filter: blur(18px);
 
-border-radius:var(--radius);
+      border-radius: var(--radius);
 
-padding:36px;
+      padding: 36px;
 
-box-shadow:
-0 20px 50px
-rgba(0,0,0,.08);
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, .08);
 
-}
+    }
 
-.about h3{
+    .about h3 {
 
-font-size:52px;
+      font-size: 52px;
 
-font-family:'Cormorant Garamond';
+      font-family: 'Cormorant Garamond';
 
-margin-bottom:20px;
+      margin-bottom: 20px;
 
-}
+    }
 
-.about p{
+    .about p {
 
-line-height:2;
+      line-height: 2;
 
-}
+    }
 
-.timeline{
+    .timeline {
 
-display:grid;
+      display: grid;
 
-gap:18px;
+      gap: 18px;
 
-margin-top:30px;
+      margin-top: 30px;
 
-}
+    }
 
-.timeline div{
+    .timeline div {
 
-padding:20px;
+      padding: 20px;
 
-border-left:4px solid var(--gold);
+      border-left: 4px solid var(--gold);
 
-}
+    }
 
-/*==========================
+    /*==========================
 SERVICES
 ==========================*/
 
-.services-grid{
+    .services-grid {
 
-display:grid;
+      display: grid;
 
-grid-template-columns:
-repeat(
-auto-fit,
-minmax(280px,1fr)
-);
+      grid-template-columns:
+        repeat(auto-fit,
+          minmax(280px, 1fr));
 
-gap:28px;
+      gap: 28px;
 
-}
+    }
 
-.service{
+    .service {
 
-overflow:hidden;
+      overflow: hidden;
 
-transition:.5s;
+      transition: .5s;
 
-}
+    }
 
-.service:hover{
+    .service:hover {
 
-transform:
-translateY(-12px);
+      transform:
+        translateY(-12px);
 
-}
+    }
 
-.service img{
+    .service img {
 
-height:280px;
+      height: 280px;
 
-object-fit:cover;
+      object-fit: cover;
 
-}
+    }
 
-.service-content{
+    .service-content {
 
-padding:30px;
+      padding: 30px;
 
-}
+    }
 
-.service h4{
+    .service h4 {
 
-font-size:34px;
+      font-size: 34px;
 
-font-family:
-'Cormorant Garamond';
+      font-family:
+        'Cormorant Garamond';
 
-margin-bottom:12px;
+      margin-bottom: 12px;
 
-}
+    }
 
-.learn{
+    .learn {
 
-margin-top:18px;
+      margin-top: 18px;
 
-display:inline-block;
+      display: inline-block;
 
-color:var(--gold);
+      color: var(--gold);
 
-}
+    }
 
 
-<!-- ==========================
-GALLERY
-========================== -->
+    < !--==========================GALLERY==========================--><section id="gallery"><div class="container"><h2 class="section-title">Luxury Gallery </h2><p class="subtitle">Moments decorated with elegance </p><div class="filters"><button onclick="filterGallery('all')">All</button><button onclick="filterGallery('Events')">Events</button><button onclick="filterGallery('Mandap')">Mandap</button><button onclick="filterGallery('Stage')">Stage</button><button onclick="filterGallery('Car')">Car</button><button onclick="filterGallery('Corporate')">Corporate</button></div><div class="gallery-grid"
+    id="galleryGrid"></div></div></section>< !-- LIGHTBOX --><div class="lightbox"
+    id="lightbox"
+    onclick="closeLightbox()"><img id="lightboxImg"></div>< !--==========================PRICING==========================--><section id="pricing"><div class="container"><h2 class="section-title">Royal Packages </h2><p class="subtitle">Choose your luxury experience </p><div class="pricing-grid"><div class="price card"><h3>Royal Essential </h3><h1>₹25K+</h1><ul><li>Elegant Floral Setup</li><li>Basic Stage Styling</li><li>Premium Decor Elements</li></ul><button class="btn">Choose </button></div><div class="price featured"><div class="tag">POPULAR </div><h3>Royal Signature </h3><h1>₹65K+</h1><ul><li>Luxury Floral Design</li><li>Premium Stage</li><li>Mandap Styling</li><li>Photography Corner</li></ul><button class="btn">Choose </button></div><div class="price card"><h3>Royal Palace Luxury </h3><h1>₹1.5L+</h1><ul><li>Complete Royal Setup</li><li>Luxury Florals</li><li>Premium Entry Design</li><li>VIP Styling</li></ul><button class="btn">Choose </button></div></div></div></section>< !--==========================TESTIMONIALS==========================--><section id="testimonials"><div class="container"><h2 class="section-title">Loved By Families </h2><p class="subtitle">Experiences that became memories </p><div class="testimonial-slider"
+    id="slider"><div class="testimonial card">★★★★★ <p>Beautiful decoration. Looked truly royal. </p><strong>— Wedding Client </strong></div><div class="testimonial card">★★★★★ <p>Exceeded expectations. Elegant and premium. </p><strong>— Corporate Event </strong></div><div class="testimonial card">★★★★★ <p>Best floral work we've experienced.
 
-<section id="gallery">
+    </p><strong>— Family Celebration </strong></div></div></div></section><style>
+    /*==========================*/
 
-<div class="container">
+    .filters {
 
-<h2 class="section-title">
+      display: flex;
 
-Luxury Gallery
+      justify-content: center;
 
-</h2>
+      gap: 12px;
 
-<p class="subtitle">
+      flex-wrap: wrap;
 
-Moments decorated with elegance
+      margin-bottom: 40px;
 
-</p>
+    }
 
-<div class="filters">
+    .filters button {
 
-<button onclick="filterGallery('all')">All</button>
+      padding: 12px 20px;
 
-<button onclick="filterGallery('Events')">Events</button>
+      border: none;
 
-<button onclick="filterGallery('Mandap')">Mandap</button>
+      border-radius: 999px;
 
-<button onclick="filterGallery('Stage')">Stage</button>
+      cursor: pointer;
 
-<button onclick="filterGallery('Car')">Car</button>
+      background: var(--card);
 
-<button onclick="filterGallery('Corporate')">Corporate</button>
+    }
 
-</div>
+    .gallery-grid {
 
-<div
-class="gallery-grid"
-id="galleryGrid">
+      columns: 3;
 
-</div>
+      column-gap: 18px;
 
-</div>
+    }
 
-</section>
+    .gallery-item {
 
-<!-- LIGHTBOX -->
+      margin-bottom: 18px;
 
-<div
-class="lightbox"
-id="lightbox"
-onclick="closeLightbox()">
+      overflow: hidden;
 
-<img id="lightboxImg">
+      border-radius: 22px;
 
-</div>
+      cursor: pointer;
 
+    }
 
-<!-- ==========================
-PRICING
-========================== -->
+    .gallery-item img {
 
-<section id="pricing">
+      transition: .5s;
 
-<div class="container">
+    }
 
-<h2 class="section-title">
+    .gallery-item:hover img {
 
-Royal Packages
+      transform: scale(1.08);
 
-</h2>
+    }
 
-<p class="subtitle">
+    .lightbox {
 
-Choose your luxury experience
+      display: none;
 
-</p>
+      position: fixed;
 
-<div class="pricing-grid">
+      inset: 0;
 
-<div class="price card">
+      background: rgba(0, 0, 0, .88);
 
-<h3>
+      z-index: 999;
 
-Royal Essential
+      align-items: center;
 
-</h3>
+      justify-content: center;
 
-<h1>
+    }
 
-₹25K+
+    .lightbox img {
 
-</h1>
+      max-width: 90%;
 
-<ul>
+      border-radius: 24px;
 
-<li>Elegant Floral Setup</li>
+    }
 
-<li>Basic Stage Styling</li>
+    /*==========================*/
 
-<li>Premium Decor Elements</li>
+    .pricing-grid {
 
-</ul>
+      display: grid;
 
-<button class="btn">
+      grid-template-columns:
+        repeat(auto-fit,
+          minmax(320px, 1fr));
 
-Choose
+      gap: 30px;
 
-</button>
+    }
 
-</div>
+    .price {
 
-<div class="price featured">
+      text-align: center;
 
-<div class="tag">
+    }
 
-POPULAR
+    .price h1 {
 
-</div>
+      color: var(--gold);
 
-<h3>
+      font-size: 60px;
 
-Royal Signature
+      margin: 20px 0;
 
-</h3>
+    }
 
-<h1>
+    .price ul {
 
-₹65K+
+      list-style: none;
 
-</h1>
+      line-height: 2.4;
 
-<ul>
+      margin-bottom: 30px;
 
-<li>Luxury Floral Design</li>
+    }
 
-<li>Premium Stage</li>
+    .featured {
 
-<li>Mandap Styling</li>
+      padding: 40px;
 
-<li>Photography Corner</li>
+      border-radius: 32px;
 
-</ul>
+      background:
 
-<button class="btn">
+        linear-gradient(135deg,
+          var(--gold),
+          #e8cb84);
 
-Choose
+      color: white;
 
-</button>
+      position: relative;
 
-</div>
+    }
 
-<div class="price card">
+    .tag {
 
-<h3>
+      position: absolute;
 
-Royal Palace Luxury
+      top: 18px;
 
-</h3>
+      right: 18px;
 
-<h1>
+      background: white;
 
-₹1.5L+
+      color: black;
 
-</h1>
+      padding: 8px 12px;
 
-<ul>
+      border-radius: 999px;
 
-<li>Complete Royal Setup</li>
+    }
 
-<li>Luxury Florals</li>
+    /*==========================*/
 
-<li>Premium Entry Design</li>
+    .testimonial-slider {
 
-<li>VIP Styling</li>
+      display: grid;
 
-</ul>
+      grid-template-columns:
+        repeat(auto-fit,
+          minmax(300px, 1fr));
 
-<button class="btn">
+      gap: 30px;
 
-Choose
+    }
 
-</button>
+    .testimonial {
 
-</div>
+      text-align: center;
 
-</div>
+      font-size: 20px;
 
-</div>
+      line-height: 2;
 
-</section>
+    }
 
+    /*==========================*/
 
-<!-- ==========================
-TESTIMONIALS
-========================== -->
+    @media(max-width:900px) {
 
-<section id="testimonials">
+      .gallery-grid {
 
-<div class="container">
+        columns: 1;
 
-<h2 class="section-title">
+      }
 
-Loved By Families
+    }
+  </style>
 
-</h2>
 
-<p class="subtitle">
 
-Experiences that became memories
+  <script>
 
-</p>
+    const galleryData = [
 
-<div
-class="testimonial-slider"
-id="slider">
+      {
+        cat: "Events",
+        img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed"
+      },
 
-<div class="testimonial card">
+      {
+        cat: "Mandap",
+        img: "https://images.unsplash.com/photo-1511578314322"
+      },
 
-★★★★★
+      {
+        cat: "Stage",
+        img: "https://images.unsplash.com/photo-1520854221256"
+      },
 
-<p>
+      {
+        cat: "Car",
+        img: "https://images.unsplash.com/photo-1502877338535"
+      },
 
-Beautiful decoration.
-Looked truly royal.
+      {
+        cat: "Corporate",
+        img: "https://images.unsplash.com/photo-1497366754035"
+      },
 
-</p>
+      {
+        cat: "Events",
+        img: "https://images.unsplash.com/photo-1469371670807"
+      }
 
-<strong>
+    ]
 
-— Wedding Client
+    const gallery =
+      document
+        .getElementById(
+          "galleryGrid"
+        )
 
-</strong>
+    function renderGallery(cat = "all") {
 
-</div>
+      gallery.innerHTML = ""
 
-<div class="testimonial card">
+      galleryData
 
-★★★★★
+        .filter(
+          x =>
+            cat === "all"
+            ||
+            x.cat === cat
+        )
 
-<p>
+        .forEach(g => {
 
-Exceeded expectations.
-
-Elegant and premium.
-
-</p>
-
-<strong>
-
-— Corporate Event
-
-</strong>
-
-</div>
-
-<div class="testimonial card">
-
-★★★★★
-
-<p>
-
-Best floral work
-we've experienced.
-
-</p>
-
-<strong>
-
-— Family Celebration
-
-</strong>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<style>
-
-/*==========================*/
-
-.filters{
-
-display:flex;
-
-justify-content:center;
-
-gap:12px;
-
-flex-wrap:wrap;
-
-margin-bottom:40px;
-
-}
-
-.filters button{
-
-padding:12px 20px;
-
-border:none;
-
-border-radius:999px;
-
-cursor:pointer;
-
-background:var(--card);
-
-}
-
-.gallery-grid{
-
-columns:3;
-
-column-gap:18px;
-
-}
-
-.gallery-item{
-
-margin-bottom:18px;
-
-overflow:hidden;
-
-border-radius:22px;
-
-cursor:pointer;
-
-}
-
-.gallery-item img{
-
-transition:.5s;
-
-}
-
-.gallery-item:hover img{
-
-transform:scale(1.08);
-
-}
-
-.lightbox{
-
-display:none;
-
-position:fixed;
-
-inset:0;
-
-background:rgba(0,0,0,.88);
-
-z-index:999;
-
-align-items:center;
-
-justify-content:center;
-
-}
-
-.lightbox img{
-
-max-width:90%;
-
-border-radius:24px;
-
-}
-
-/*==========================*/
-
-.pricing-grid{
-
-display:grid;
-
-grid-template-columns:
-repeat(
-auto-fit,
-minmax(320px,1fr)
-);
-
-gap:30px;
-
-}
-
-.price{
-
-text-align:center;
-
-}
-
-.price h1{
-
-color:var(--gold);
-
-font-size:60px;
-
-margin:20px 0;
-
-}
-
-.price ul{
-
-list-style:none;
-
-line-height:2.4;
-
-margin-bottom:30px;
-
-}
-
-.featured{
-
-padding:40px;
-
-border-radius:32px;
-
-background:
-
-linear-gradient(
-135deg,
-var(--gold),
-#e8cb84
-);
-
-color:white;
-
-position:relative;
-
-}
-
-.tag{
-
-position:absolute;
-
-top:18px;
-
-right:18px;
-
-background:white;
-
-color:black;
-
-padding:8px 12px;
-
-border-radius:999px;
-
-}
-
-/*==========================*/
-
-.testimonial-slider{
-
-display:grid;
-
-grid-template-columns:
-repeat(
-auto-fit,
-minmax(300px,1fr)
-);
-
-gap:30px;
-
-}
-
-.testimonial{
-
-text-align:center;
-
-font-size:20px;
-
-line-height:2;
-
-}
-
-/*==========================*/
-
-@media(max-width:900px){
-
-.gallery-grid{
-
-columns:1;
-
-}
-
-}
-
-</style>
-
-
-
-<script>
-
-const galleryData=[
-
-{
-cat:"Events",
-img:"https://images.unsplash.com/photo-1519225421980-715cb0215aed"
-},
-
-{
-cat:"Mandap",
-img:"https://images.unsplash.com/photo-1511578314322"
-},
-
-{
-cat:"Stage",
-img:"https://images.unsplash.com/photo-1520854221256"
-},
-
-{
-cat:"Car",
-img:"https://images.unsplash.com/photo-1502877338535"
-},
-
-{
-cat:"Corporate",
-img:"https://images.unsplash.com/photo-1497366754035"
-},
-
-{
-cat:"Events",
-img:"https://images.unsplash.com/photo-1469371670807"
-}
-
-]
-
-const gallery=
-document
-.getElementById(
-"galleryGrid"
-)
-
-function renderGallery(cat="all"){
-
-gallery.innerHTML=""
-
-galleryData
-
-.filter(
-x=>
-cat==="all"
-||
-x.cat===cat
-)
-
-.forEach(g=>{
-
-gallery.innerHTML+=`
+          gallery.innerHTML += `
 
 <div
 class="gallery-item">
@@ -1071,407 +777,397 @@ src="${g.img}">
 
 `
 
-})
+        })
 
-}
+    }
 
-renderGallery()
+    renderGallery()
 
-function filterGallery(c){
+    function filterGallery(c) {
 
-renderGallery(c)
+      renderGallery(c)
 
-}
+    }
 
-function openLightbox(src){
+    function openLightbox(src) {
 
-document
-.getElementById(
-"lightbox"
-)
-.style.display=
-"flex"
+      document
+        .getElementById(
+          "lightbox"
+        )
+        .style.display =
+        "flex"
 
-document
-.getElementById(
-"lightboxImg"
-)
-.src=src
+      document
+        .getElementById(
+          "lightboxImg"
+        )
+        .src = src
 
-}
+    }
 
-function closeLightbox(){
+    function closeLightbox() {
 
-document
-.getElementById(
-"lightbox"
-)
-.style.display=
-"none"
+      document
+        .getElementById(
+          "lightbox"
+        )
+        .style.display =
+        "none"
 
-}
+    }
 
-</script>
+  </script>
 
 
-<style>
-/*==========================
+  <style>
+    /*==========================
 DARK MODE
 ==========================*/
 
-.theme{
-background:none;
-border:none;
-font-size:26px;
-cursor:pointer;
-}
+    .theme {
+      background: none;
+      border: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
 
-/*==========================
+    /*==========================
 MOBILE
 ==========================*/
 
-@media(max-width:900px){
+    @media(max-width:900px) {
 
-.hero h1{
+      .hero h1 {
 
-font-size:58px;
+        font-size: 58px;
 
-}
+      }
 
-.about-grid{
+      .about-grid {
 
-grid-template-columns:1fr;
+        grid-template-columns: 1fr;
 
-}
+      }
 
-.menu{
+      .menu {
 
-display:none;
+        display: none;
 
-}
+      }
 
-.section-title{
+      .section-title {
 
-font-size:42px;
+        font-size: 42px;
 
-}
+      }
 
-}
-
-</style>
+    }
+  </style>
 </head>
 
 <body>
 
-<nav>
+  <nav>
 
-<div class="container nav-inner">
+    <div class="container nav-inner">
 
-<div class="logo">
+      <div class="logo">
 
-SAINI FLOWER DECORATORS
+        SAINI FLOWER DECORATORS
 
-</div>
+      </div>
 
-<div class="menu">
+      <div class="menu">
 
-<a href="#">Home</a>
+        <a href="#">Home</a>
 
-<a href="#about">About</a>
+        <a href="#about">About</a>
 
-<a href="#services">Services</a>
+        <a href="#services">Services</a>
 
-<a href="#">Gallery</a>
+        <a href="#">Gallery</a>
 
-<a href="#">Pricing</a>
+        <a href="#">Pricing</a>
 
-<a href="#">Booking</a>
+        <a href="#">Booking</a>
 
-<a href="#">Contact</a>
+        <a href="#">Contact</a>
 
-</div>
+      </div>
 
-<div>
+      <div>
 
-<button
-class="theme"
-onclick="toggleTheme()">
+        <button class="theme" onclick="toggleTheme()">
 
-🌙
+          🌙
 
-</button>
+        </button>
 
-<button class="btn">
+        <button class="btn">
 
-Book Now
+          Book Now
 
-</button>
+        </button>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</nav>
+  </nav>
 
-<!-- HERO -->
+  <!-- HERO -->
 
-<section class="hero">
+  <section class="hero">
 
-<div class="flower f1">
-🌸
-</div>
+    <div class="flower f1">
+      🌸
+    </div>
 
-<div class="flower f2">
-🌺
-</div>
+    <div class="flower f2">
+      🌺
+    </div>
 
-<div class="flower f3">
-🌷
-</div>
+    <div class="flower f3">
+      🌷
+    </div>
 
-<div class="container">
+    <div class="container">
 
-<div class="hero-content">
+      <div class="hero-content">
 
-<div class="badge">
+        <div class="badge">
 
-Royal Event Decoration Since 1987
+          Royal Event Decoration Since 1987
 
-</div>
+        </div>
 
-<h1>
+        <h1>
 
-SAINI FLOWER DECORATORS
+          SAINI FLOWER DECORATORS
 
-</h1>
+        </h1>
 
-<p>
+        <p>
 
-Decorating Memories With Flowers
+          Decorating Memories With Flowers
 
-Premium luxury decoration
-crafted with elegance.
+          Premium luxury decoration
+          crafted with elegance.
 
-</p>
+        </p>
 
-<div class="hero-buttons">
+        <div class="hero-buttons">
 
-<button class="btn">
+          <button class="btn">
 
-Book Decoration
+            Book Decoration
 
-</button>
+          </button>
 
-<button
-class="btn secondary">
+          <button class="btn secondary">
 
-Explore Our Work
+            Explore Our Work
 
-</button>
+          </button>
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
-<!-- ABOUT -->
+  <!-- ABOUT -->
 
-<section
-class="about"
-id="about">
+  <section class="about" id="about">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
+      <h2 class="section-title">
 
-Our Legacy
+        Our Legacy
 
-</h2>
+      </h2>
 
-<p class="subtitle">
+      <p class="subtitle">
 
-Royal Floral Craftsmanship
-Since 1987
+        Royal Floral Craftsmanship
+        Since 1987
 
-</p>
+      </p>
 
-<div class="about-grid">
+      <div class="about-grid">
 
-<div class="card">
+        <div class="card">
 
-<h3>
+          <h3>
 
-A Family Tradition
+            A Family Tradition
 
-</h3>
+          </h3>
 
-<p>
+          <p>
 
-For decades,
-SAINI FLOWER DECORATORS
-has transformed
-events into memories.
+            For decades,
+            SAINI FLOWER DECORATORS
+            has transformed
+            events into memories.
 
-Luxury styling,
-careful craftsmanship,
-and timeless elegance.
+            Luxury styling,
+            careful craftsmanship,
+            and timeless elegance.
 
-Every flower placement
-tells a story.
+            Every flower placement
+            tells a story.
 
-</p>
+          </p>
 
-<div class="timeline">
+          <div class="timeline">
 
-<div>
+            <div>
 
-1987 — Foundation
+              1987 — Foundation
 
-</div>
+            </div>
 
-<div>
+            <div>
 
-2000 — Premium Events
+              2000 — Premium Events
 
-</div>
+            </div>
 
-<div>
+            <div>
 
-2015 — Royal Expansion
+              2015 — Royal Expansion
 
-</div>
+            </div>
 
-<div>
+            <div>
 
-Today — Luxury Excellence
+              Today — Luxury Excellence
 
-</div>
+            </div>
 
-</div>
+          </div>
 
-</div>
+        </div>
 
-<div>
+        <div>
 
-<img
-src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1000&q=80">
+          <img src="https://images.unsplash.com/photo-1469371670807-013ccf25f16a?auto=format&fit=crop&w=1000&q=80">
 
-</div>
+        </div>
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
-<!-- SERVICES -->
+  <!-- SERVICES -->
 
-<section
-id="services">
+  <section id="services">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
+      <h2 class="section-title">
 
-Our Decorations
+        Our Decorations
 
-</h2>
+      </h2>
 
-<p class="subtitle">
+      <p class="subtitle">
 
-Luxury crafted floral experiences
+        Luxury crafted floral experiences
 
-</p>
+      </p>
 
-<div
-class="services-grid"
-id="servicesGrid">
+      <div class="services-grid" id="servicesGrid">
 
-</div>
+      </div>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
-<script>
+  <script>
 
-const servicesData=[
+    const servicesData = [
 
-{
+      {
 
-title:"Event Decoration",
+        title: "Event Decoration",
 
-img:
-"https://images.unsplash.com/photo-1519741497674-611481863552",
+        img:
+          "https://images.unsplash.com/photo-1519741497674-611481863552",
 
-desc:
-"Luxury decoration for celebrations and gatherings."
+        desc:
+          "Luxury decoration for celebrations and gatherings."
 
-},
+      },
 
-{
+      {
 
-title:"Mandap Decoration",
+        title: "Mandap Decoration",
 
-img:
-"https://images.unsplash.com/photo-1519225421980-715cb0215aed",
+        img:
+          "https://images.unsplash.com/photo-1519225421980-715cb0215aed",
 
-desc:
-"Royal floral mandap concepts."
+        desc:
+          "Royal floral mandap concepts."
 
-},
+      },
 
-{
+      {
 
-title:"Stage Decoration",
+        title: "Stage Decoration",
 
-img:
-"https://images.unsplash.com/photo-1520854221256-17451cc331bf",
+        img:
+          "https://images.unsplash.com/photo-1520854221256-17451cc331bf",
 
-desc:
-"Premium floral stage styling."
+        desc:
+          "Premium floral stage styling."
 
-},
+      },
 
-{
+      {
 
-title:"Car Decoration",
+        title: "Car Decoration",
 
-img:
-"https://images.unsplash.com/photo-1502877338535-766e1452684a",
+        img:
+          "https://images.unsplash.com/photo-1502877338535-766e1452684a",
 
-desc:
-"Elegant decoration for occasions."
+        desc:
+          "Elegant decoration for occasions."
 
-},
+      },
 
-{
+      {
 
-title:"Corporate Decoration",
+        title: "Corporate Decoration",
 
-img:
-"https://images.unsplash.com/photo-1511578314322",
+        img:
+          "https://images.unsplash.com/photo-1511578314322",
 
-desc:
-"Professional premium styling."
+        desc:
+          "Professional premium styling."
 
-}
+      }
 
-]
+    ]
 
-const grid=
-document
-.getElementById(
-"servicesGrid"
-)
+    const grid =
+      document
+        .getElementById(
+          "servicesGrid"
+        )
 
-servicesData
-.forEach(s=>{
+    servicesData
+      .forEach(s => {
 
-grid.innerHTML+=`
+        grid.innerHTML += `
 
 <div class="card service">
 
@@ -1505,712 +1201,674 @@ Learn More →
 
 `
 
-})
+      })
 
-function toggleTheme(){
+    function toggleTheme() {
 
-document.body
-.classList
-.toggle("dark")
+      document.body
+        .classList
+        .toggle("dark")
 
-}
+    }
 
-</script>
+  </script>
 
-<!-- ==========================
+  <!-- ==========================
 BOOKING
 ========================== -->
 
-<section id="booking">
+  <section id="booking">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
+      <h2 class="section-title">
 
-Book Decoration
+        Book Decoration
 
-</h2>
+      </h2>
 
-<p class="subtitle">
+      <p class="subtitle">
 
-Reserve your luxury experience
+        Reserve your luxury experience
 
-</p>
+      </p>
 
-<form
-id="bookingForm"
-class="booking card">
+      <form id="bookingForm" class="booking card">
 
-<input
-required
-placeholder="Customer Name">
+        <input required placeholder="Customer Name">
 
-<input
-required
-type="tel"
-placeholder="Phone">
+        <input required type="tel" placeholder="Phone">
 
-<input
-type="email"
-placeholder="Email">
+        <input type="email" placeholder="Email">
 
-<select required>
+        <select required>
 
-<option>
-Event Type
-</option>
+          <option>
+            Event Type
+          </option>
 
-<option>
-Wedding
-</option>
+          <option>
+            Wedding
+          </option>
 
-<option>
-Engagement
-</option>
+          <option>
+            Engagement
+          </option>
 
-<option>
-Corporate
-</option>
+          <option>
+            Corporate
+          </option>
 
-<option>
-Celebration
-</option>
+          <option>
+            Celebration
+          </option>
 
-</select>
+        </select>
 
-<input
-type="date">
+        <input type="date">
 
-<input
-placeholder="Location">
+        <input placeholder="Location">
 
-<input
-placeholder="Budget">
+        <input placeholder="Budget">
 
-<select>
+        <select>
 
-<option>
-Service
-</option>
+          <option>
+            Service
+          </option>
 
-<option>
-Event Decoration
-</option>
+          <option>
+            Event Decoration
+          </option>
 
-<option>
-Mandap Decoration
-</option>
+          <option>
+            Mandap Decoration
+          </option>
 
-<option>
-Stage Decoration
-</option>
+          <option>
+            Stage Decoration
+          </option>
 
-<option>
-Car Decoration
-</option>
+          <option>
+            Car Decoration
+          </option>
 
-<option>
-Corporate Decoration
-</option>
+          <option>
+            Corporate Decoration
+          </option>
 
-</select>
+        </select>
 
-<textarea
-placeholder="Notes">
+        <textarea placeholder="Notes">
 
 </textarea>
 
-<label class="upload">
+        <label class="upload">
 
-Upload Inspiration
+          Upload Inspiration
 
-<input
-type="file"
-hidden>
+          <input type="file" hidden>
 
-</label>
+        </label>
 
-<button
-class="btn">
+        <button class="btn">
 
-Book Now
+          Book Now
 
-</button>
+        </button>
 
-</form>
+      </form>
 
-</div>
+    </div>
 
-</section>
+  </section>
 
 
 
-<!-- ==========================
+  <!-- ==========================
 CONTACT
 ========================== -->
 
-<section id="contact">
+  <section id="contact">
 
-<div class="container">
+    <div class="container">
 
-<h2 class="section-title">
+      <h2 class="section-title">
 
-Contact Us
+        Contact Us
 
-</h2>
+      </h2>
 
-<p class="subtitle">
+      <p class="subtitle">
 
-Let’s create memorable events
+        Let’s create memorable events
 
-</p>
+      </p>
 
-<div class="contact-grid">
+      <div class="contact-grid">
 
-<div class="card">
+        <div class="card">
 
-<h3>
+          <h3>
 
-SAINI FLOWER DECORATORS
+            SAINI FLOWER DECORATORS
 
-</h3>
+          </h3>
 
-<br>
+          <br>
 
-<p>
+          <p>
 
-📍 New Delhi
+            📍 New Delhi
 
-</p>
+          </p>
 
-<p>
+          <p>
 
-📞 +91 XXXXXXXXXX
+            📞 +91 9868896346
 
-</p>
+          </p>
 
-<p>
+          <p>
 
-✉ hello@sainiflowers.com
+            ✉ sainiflowersanddecorators@gmail.com
 
-</p>
+          </p>
 
-<br>
+          <br>
 
-<div class="socials">
+          <div class="socials">
 
-<a href="#">
+            <a href="https://www.instagram.com/saini_.florist16/?utm_source=ig_web_button_share_sheet">
 
-Instagram
+              Instagram
 
-</a>
+            </a>
 
-<a href="#">
+            
 
-Facebook
+          </div>
 
-</a>
+        </div>
 
-<a href="#">
+        <div class="card">
 
-WhatsApp
+          <div class="map">
 
-</a>
+            Google Maps
 
-</div>
+          </div>
 
-</div>
+        </div>
 
-<div class="card">
+      </div>
 
-<div class="map">
+    </div>
 
-Google Maps
+  </section>
 
-</div>
 
-</div>
 
-</div>
+  <!-- FLOATING -->
 
-</div>
+  <a class="wa" href="#">
 
-</section>
+    💬
 
+  </a>
 
+  <a class="call" href="#">
 
-<!-- FLOATING -->
+    📞
 
-<a
-class="wa"
-href="#">
+  </a>
 
-💬
 
-</a>
 
-<a
-class="call"
-href="#">
+  <footer>
 
-📞
+    <div class="container">
 
-</a>
+      <h3>
 
+        SAINI FLOWER DECORATORS
 
+      </h3>
 
-<footer>
+      <p>
 
-<div class="container">
+        Made by Moksh Saini with ⁠♡⁠
 
-<h3>
+      </p>
 
-SAINI FLOWER DECORATORS
+      <p>
 
-</h3>
+        © Since 1987
 
-<p>
+      </p>
 
-Made by Moksh Saini with ⁠♡⁠
+    </div>
 
-</p>
+  </footer>
 
-<p>
 
-© Since 1987
 
-</p>
+  <style>
+    /*==========================*/
 
-</div>
+    .booking {
 
-</footer>
+      display: grid;
 
+      gap: 18px;
 
+      max-width: 850px;
 
-<style>
+      margin: auto;
 
-/*==========================*/
+    }
 
-.booking{
+    .booking input,
+    .booking select,
+    .booking textarea {
 
-display:grid;
+      padding: 18px;
 
-gap:18px;
+      border: none;
 
-max-width:850px;
+      border-radius: 18px;
 
-margin:auto;
+      background:
 
-}
+        rgba(255,
+          255,
+          255,
+          .65);
 
-.booking input,
-.booking select,
-.booking textarea{
+    }
 
-padding:18px;
+    textarea {
 
-border:none;
+      height: 160px;
 
-border-radius:18px;
+      resize: none;
 
-background:
+    }
 
-rgba(
-255,
-255,
-255,
-.65
-);
+    .upload {
 
-}
+      padding: 22px;
 
-textarea{
+      border: 2px dashed var(--gold);
 
-height:160px;
+      text-align: center;
 
-resize:none;
+      cursor: pointer;
 
-}
+      border-radius: 20px;
 
-.upload{
+    }
 
-padding:22px;
+    .contact-grid {
 
-border:2px dashed
-var(--gold);
+      display: grid;
 
-text-align:center;
+      grid-template-columns:
+        1fr 1fr;
 
-cursor:pointer;
+      gap: 30px;
 
-border-radius:20px;
+    }
 
-}
+    .socials {
 
-.contact-grid{
+      display: flex;
 
-display:grid;
+      gap: 16px;
 
-grid-template-columns:
-1fr
-1fr;
+      flex-wrap: wrap;
 
-gap:30px;
+    }
 
-}
+    .socials a {
 
-.socials{
+      color: var(--gold);
 
-display:flex;
+    }
 
-gap:16px;
+    .map {
 
-flex-wrap:wrap;
+      height: 350px;
 
-}
+      display: grid;
 
-.socials a{
+      place-items: center;
 
-color:var(--gold);
+      font-size: 34px;
 
-}
+      background:
 
-.map{
+        linear-gradient(135deg,
+          var(--gold),
+          var(--emerald));
 
-height:350px;
+      color: white;
 
-display:grid;
+      border-radius: 26px;
 
-place-items:center;
+    }
 
-font-size:34px;
+    /*==========================*/
 
-background:
+    .wa,
+    .call {
 
-linear-gradient(
-135deg,
-var(--gold),
-var(--emerald)
-);
+      position: fixed;
 
-color:white;
+      right: 24px;
 
-border-radius:26px;
+      width: 64px;
 
-}
+      height: 64px;
 
-/*==========================*/
+      border-radius: 50%;
 
-.wa,
-.call{
+      display: grid;
 
-position:fixed;
+      place-items: center;
 
-right:24px;
+      text-decoration: none;
 
-width:64px;
+      font-size: 26px;
 
-height:64px;
+      color: white;
 
-border-radius:50%;
+      z-index: 999;
 
-display:grid;
+    }
 
-place-items:center;
+    .wa {
 
-text-decoration:none;
+      bottom: 100px;
 
-font-size:26px;
+      background: #25D366;
 
-color:white;
+    }
 
-z-index:999;
+    .call {
 
-}
+      bottom: 180px;
 
-.wa{
+      background: var(--gold);
 
-bottom:100px;
+    }
 
-background:#25D366;
+    /*==========================*/
 
-}
+    footer {
 
-.call{
+      padding: 80px 0;
 
-bottom:180px;
+      text-align: center;
 
-background:var(--gold);
+    }
 
-}
+    footer h3 {
 
-/*==========================*/
+      font-size: 42px;
 
-footer{
+      font-family:
+        "Cormorant Garamond";
 
-padding:80px 0;
+      color: var(--gold);
 
-text-align:center;
+      margin-bottom: 20px;
 
-}
+    }
 
-footer h3{
+    /*==========================*/
 
-font-size:42px;
+    .success {
 
-font-family:
-"Cormorant Garamond";
+      position: fixed;
 
-color:var(--gold);
+      top: 30px;
 
-margin-bottom:20px;
+      left: 50%;
 
-}
+      transform:
+        translateX(-50%);
 
-/*==========================*/
+      background:
 
-.success{
+        var(--gold);
 
-position:fixed;
+      color: white;
 
-top:30px;
+      padding: 20px;
 
-left:50%;
+      border-radius: 999px;
 
-transform:
-translateX(-50%);
+      z-index: 9999;
 
-background:
+      animation:
+        fade 4s;
 
-var(--gold);
+    }
 
-color:white;
+    @keyframes fade {
 
-padding:20px;
+      0% {
 
-border-radius:999px;
+        opacity: 0;
 
-z-index:9999;
+      }
 
-animation:
-fade 4s;
+      20% {
 
-}
+        opacity: 1;
 
-@keyframes fade{
+      }
 
-0%{
+      100% {
 
-opacity:0;
+        opacity: 0;
 
-}
+      }
 
-20%{
+    }
 
-opacity:1;
+    @media(max-width:900px) {
 
-}
+      .contact-grid {
 
-100%{
+        grid-template-columns: 1fr;
 
-opacity:0;
+      }
 
-}
+    }
+  </style>
 
-}
 
-@media(max-width:900px){
 
-.contact-grid{
+  <script>
 
-grid-template-columns:1fr;
+    /*==========================
+    SITE CONFIG
+    ==========================*/
 
-}
+    const SITE_CONFIG = {
 
-}
+      businessName:
+        "SAINI FLOWER DECORATORS",
 
-</style>
+      tagline:
+        "Decorating Memories With Flowers",
 
+      phone:
+        "+919868896346",
 
+      email:
+        "sainiflowersanddecorators@gmail.com",
 
-<script>
+      colors: {
 
-/*==========================
-SITE CONFIG
-==========================*/
+        gold: "#C9A34E",
 
-const SITE_CONFIG={
+        emerald: "#0F5B4D"
 
-businessName:
-"SAINI FLOWER DECORATORS",
+      }
 
-tagline:
-"Decorating Memories With Flowers",
+    }
 
-phone:
-"+91XXXXXXXXXX",
+    /*==========================
+    BOOKING
+    ==========================*/
 
-email:
-"hello@sainiflowers.com",
+    document
 
-colors:{
+      .getElementById(
+        "bookingForm"
+      )
 
-gold:"#C9A34E",
+      .addEventListener(
 
-emerald:"#0F5B4D"
+        "submit",
 
-}
+        e => {
 
-}
+          e.preventDefault()
 
-/*==========================
-BOOKING
-==========================*/
+          const box =
+            document
+              .createElement(
+                "div"
+              )
 
-document
+          box.className =
+            "success"
 
-.getElementById(
-"bookingForm"
-)
-
-.addEventListener(
-
-"submit",
-
-e=>{
-
-e.preventDefault()
-
-const box=
-document
-.createElement(
-"div"
-)
-
-box.className=
-"success"
-
-box.innerHTML=`
+          box.innerHTML = `
 
 Thank you for choosing
 Saini Flower Decorators.
 
 `
 
-document
-.body
-.appendChild(
-box
-)
+          document
+            .body
+            .appendChild(
+              box
+            )
 
-setTimeout(
+          setTimeout(
 
-()=>box.remove(),
+            () => box.remove(),
 
-4000
+            4000
 
-)
+          )
 
-/*
+          /*
+          
+          API READY
+          
+          fetch("/api/book")
+          
+          */
 
-API READY
+          e.target.reset()
 
-fetch("/api/book")
+        }
 
-*/
+      )
 
-e.target.reset()
+    /*==========================
+    PARALLAX
+    ==========================*/
 
-}
+    window
+      .addEventListener(
 
-)
+        "scroll",
 
-/*==========================
-PARALLAX
-==========================*/
+        () => {
 
-window
-.addEventListener(
+          const y =
 
-"scroll",
+            window
+              .scrollY
 
-()=>{
+          document
+            .querySelector(
 
-const y=
+              ".hero"
 
-window
-.scrollY
+            )
 
-document
-.querySelector(
+            .style.backgroundPosition =
 
-".hero"
+            `center ${y * .2}px`
 
-)
+        }
 
-.style.backgroundPosition=
+      )
 
-`center ${y*.2}px`
+    /*==========================
+    REVEAL
+    ==========================*/
 
-}
+    const reveal =
 
-)
+      new IntersectionObserver(
 
-/*==========================
-REVEAL
-==========================*/
+        entries => {
 
-const reveal=
+          entries.forEach(
 
-new IntersectionObserver(
+            e => {
 
-entries=>{
+              if (
+                e.isIntersecting
+              )
 
-entries.forEach(
+                e.target.style.opacity = 1
 
-e=>{
+            }
 
-if(
-e.isIntersecting
-)
+          )
 
-e.target.style.opacity=1
+        }
 
-}
+      )
 
-)
+    document
 
-}
+      .querySelectorAll(
 
-)
+        "section"
 
-document
+      )
 
-.querySelectorAll(
+      .forEach(
 
-"section"
+        s => {
 
-)
+          s.style.opacity = .2
 
-.forEach(
+          s.style.transition =
 
-s=>{
+            "1s"
 
-s.style.opacity=.2
+          reveal.observe(
+            s
+          )
 
-s.style.transition=
+        }
 
-"1s"
+      )
 
-reveal.observe(
-s
-)
-
-}
-
-)
-
-</script>
+  </script>
 
 </body>
 
@@ -2218,4 +1876,5 @@ s
 
 
 </body>
+
 </html>
